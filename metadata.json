@@ -1,0 +1,6 @@
+{
+  "name": "GES 107 CBT Quiz Prep",
+  "description": "Interactive study quiz and CBT practice platform for GES 107 (Reproductive Health, STIs, HIV/AIDS & Nutrition) with instant feedback, explanations, topic filtering, and progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

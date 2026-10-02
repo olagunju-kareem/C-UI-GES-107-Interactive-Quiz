@@ -1,0 +1,3412 @@
+import { Question, Topic } from '../types';
+
+export const TOPICS: Topic[] = [
+  {
+    id: 'all',
+    name: 'All Chapters & Topics',
+    description: 'Complete comprehensive question bank across the entire GES 107 course curriculum.',
+    questionCount: 0, // dynamically calculated
+    badge: 'Comprehensive',
+  },
+  {
+    id: 'health-living',
+    name: 'Concept of Health & Healthy Living',
+    description: 'Definitions of health (WHO, Bircher), determinants of health, healthy habits, and disease prevention.',
+    questionCount: 0,
+    badge: 'Chapter 1',
+  },
+  {
+    id: 'nutrition',
+    name: 'Nutrition, Nutrients & Dietetics',
+    description: 'Macro & micronutrients, carbohydrate classification, fats, proteins, vitamins, and deficiency disorders (Kwashiorkor, Marasmus).',
+    questionCount: 0,
+    badge: 'Chapter 2',
+  },
+  {
+    id: 'infection-microbes',
+    name: 'Infectious Diseases & Chain of Infection',
+    description: 'Chain of infection, pathogens, vectors, nosocomial infections, fomites, and modes of transmission.',
+    questionCount: 0,
+    badge: 'Chapter 3',
+  },
+  {
+    id: 'reproduction',
+    name: 'Human Reproductive Anatomy & Physiology',
+    description: 'Male & female reproductive systems, gametogenesis, ovarian & menstrual cycles, and hormones.',
+    questionCount: 0,
+    badge: 'Chapter 4',
+  },
+  {
+    id: 'adolescence-youth',
+    name: 'Adolescence, Youth & Life Skills',
+    description: 'Stages of adolescence, youth subcultures, Three C Model, life building skills, and campus challenges.',
+    questionCount: 0,
+    badge: 'Chapter 5',
+  },
+  {
+    id: 'stis-hiv',
+    name: 'STIs, HIV/AIDS Prevention & Care',
+    description: 'Epidemiology, transmission modes, diagnosis, window period, CD4 cells, HAART, PEP, and HCT counseling.',
+    questionCount: 0,
+    badge: 'Chapter 6',
+  },
+  {
+    id: 'ncds-genetics',
+    name: 'Non-Communicable Diseases & Genetics',
+    description: 'NCDs, lifestyle factors, DALYs, cancer, hypertension, and sickle cell disease genetics (HbSS/HbAS).',
+    questionCount: 0,
+    badge: 'Chapter 7',
+  },
+  {
+    id: 'drugs-substances',
+    name: 'Drugs, Pharmacology & Substance Abuse',
+    description: 'Drug classifications, routes of administration, addiction, adverse reactions, and substance abuse.',
+    questionCount: 0,
+    badge: 'Chapter 8',
+  },
+  {
+    id: 'gender-society',
+    name: 'Gender Equality, Violence & Society',
+    description: 'Gender mainstreaming, gender stereotypes, gender violence, and socio-cultural factors in health.',
+    questionCount: 0,
+    badge: 'Chapter 9',
+  },
+  {
+    id: 'demographics-stats',
+    name: 'Nigerian Health Demographics & NDHS Data',
+    description: 'NDHS statistical indicators, maternal & child mortality, life expectancy, and disease burden in Nigeria.',
+    questionCount: 0,
+    badge: 'Past Exam Focus',
+  }
+];
+
+export const GES107_QUESTIONS: Question[] = [
+  // --- 140 PAST QUESTIONS & ANSWERS (OFFICIAL UI GES 107 EXAM) ---
+  {
+    id: 1,
+    question: "Dental caries can be caused by excessive intake of:",
+    options: ["Meat and fish", "Fruit and fiber", "Milk and cheese", "Sweet and sugar"],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Frequent and excessive consumption of refined sugars and sweets provides substrate for oral bacteria (like Streptococcus mutans) to produce acids that demineralize tooth enamel, leading to dental caries.",
+    source: "UI GES 107 Past Questions (Q1)"
+  },
+  {
+    id: 2,
+    question: "The following are factors that encourage the spread of HIV infection in a community EXCEPT:",
+    options: ["Stigma and discrimination", "Care and support for HIV positive people", "Widow inheritance", "Poverty"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Care and support for people living with HIV encourages testing, adherence to antiretroviral therapy (reducing viral load), and preventive practices, which curtails rather than encourages transmission.",
+    source: "UI GES 107 Past Questions (Q2)"
+  },
+  {
+    id: 3,
+    question: "An example of host factors that may influence the acquisition of HIV include the following:",
+    options: ["The presence of other STIs", "Sexual intercourse during menstruation", "Lack of circumcision", "All the above"],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Biological host factors that increase susceptibility to HIV acquisition include existing ulcerative or inflammatory STIs, mucosal micro-tears during menstruation, and lack of male circumcision (the foreskin has a high concentration of HIV target cells).",
+    source: "UI GES 107 Past Questions (Q3)"
+  },
+  {
+    id: 4,
+    question: "Gender Violence is:",
+    options: [
+      "Any act that results in or is likely to result in physical, sexual or psychological harm or suffering to men or women",
+      "Physical or sexual abuse of a female by a male",
+      "All of the above",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "Gender-based violence (GBV) encompasses any harmful act directed against individuals or groups based on their gender, resulting in physical, sexual, psychological, or economic harm.",
+    source: "UI GES 107 Past Questions (Q4)"
+  },
+  {
+    id: 5,
+    question: "Treatment of STIs services can be accessed in the following places:",
+    options: ["Market", "Traditional healer", "Youth and adolescent clinic", "From friends"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Standard, confidential, and medically effective syndromic or lab-based STI management is accessed through qualified healthcare providers at youth and adolescent health clinics or hospital facilities.",
+    source: "UI GES 107 Past Questions (Q5)"
+  },
+  {
+    id: 6,
+    question: "All but one of the following are examples of drugs that change the mood of their users:",
+    options: ["Alcohol", "Nescafe", "Indian hemp", "Cocaine"],
+    correctAnswer: 1, // B
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Nescafe contains mild dietary caffeine, while psychoactive substances like alcohol (depressant), Indian hemp/cannabis (cannabinoid), and cocaine (powerful stimulant) produce profound alterations in mood, cognition, and perception.",
+    source: "UI GES 107 Past Questions (Q6)"
+  },
+  {
+    id: 7,
+    question: "Good nutrition will ensure the following EXCEPT:",
+    options: [
+      "Normal weight for height, strong muscles and moderate body fat",
+      "Resistance to disease and maintenance of good health",
+      "Ability to concentrate with efficient productivity",
+      "Stunting and wasting"
+    ],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Stunting (low height-for-age) and wasting (low weight-for-height) are classical manifestations of undernutrition and chronic malnutrition, not good nutrition.",
+    source: "UI GES 107 Past Questions (Q7)"
+  },
+  {
+    id: 8,
+    question: "The following methods will contribute positively to reducing HIV transmission from mother to her child:",
+    options: [
+      "Educating and testing women of child bearing age",
+      "HIV counselling and testing",
+      "Use of antiviral drugs by positive pregnant women",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Prevention of Mother-to-Child Transmission (PMTCT) is a multi-pronged strategy involving reproductive health education, voluntary HCT, and maternal ARV prophylaxis during pregnancy, labour, and breastfeeding.",
+    source: "UI GES 107 Past Questions (Q8)"
+  },
+  {
+    id: 9,
+    question: "One can know his/her HIV status by:",
+    options: ["Looking out for symptoms", "Going for a laboratory test", "Attending a workshop on HIV", "Asking a friend"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV is often asymptomatic for many years (clinical latency). The only scientifically reliable method to determine one's status is through voluntary laboratory testing (rapid antibody screening or PCR).",
+    source: "UI GES 107 Past Questions (Q9)"
+  },
+  {
+    id: 10,
+    question: "The behaviours of individuals are influenced by all but one of the following factors:",
+    options: [
+      "The environment in which the individual lives",
+      "The influence of significant persons in the individual's life",
+      "The resources that are available in the community the individual lives",
+      "The name of the community where the individual was born"
+    ],
+    correctAnswer: 3, // D
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Behavioural determinants include physical environment, social and peer influences, and available socio-economic resources, whereas the nominal name of one's birthplace has no causal influence.",
+    source: "UI GES 107 Past Questions (Q10)"
+  },
+  {
+    id: 11,
+    question: "All but one of the following is not a challenge faced by students of the University of Ibadan:",
+    options: [
+      "Sharing a room with fellow students",
+      "Heavy academic workload",
+      "Living and adapting to a completely new environment",
+      "None of the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "All listed conditions (roommate accommodation friction, rigorous academic demands, independent living and adaptation) are real, documented transitional challenges encountered by university undergraduates.",
+    source: "UI GES 107 Past Questions (Q11)"
+  },
+  {
+    id: 12,
+    question: "Taking a lot of animal fat should be avoided because of its high content of:",
+    options: ["Protein", "Mineral", "Cholesterol", "Fat soluble vitamins"],
+    correctAnswer: 2, // C
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Animal fats are high in saturated fatty acids and dietary cholesterol, which contribute to atherosclerosis, elevated LDL, and increased cardiovascular disease risks.",
+    source: "UI GES 107 Past Questions (Q12)"
+  },
+  {
+    id: 13,
+    question: "To get full benefit of condoms it must be used:",
+    options: [
+      "Consistently and correctly",
+      "Only with promiscuous partners",
+      "All of the above",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "The protective efficacy of condoms against STIs/HIV and unintended pregnancy requires correct application and consistent use for every single act of sexual intercourse.",
+    source: "UI GES 107 Past Questions (Q13)"
+  },
+  {
+    id: 14,
+    question: "HIV will infect:",
+    options: ["All vertebrate animals", "Both plants and animals", "Only humans", "All the above"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Human Immunodeficiency Virus (HIV) exhibits species-specific tropism for human CD4+ receptors and exclusively infects humans. (Simian counterparts are SIV).",
+    source: "UI GES 107 Past Questions (Q14)"
+  },
+  {
+    id: 15,
+    question: ".................. is a life skill programme with the objective of non-discriminatory, equally benefiting women and men and aimed at correcting gender imbalances:",
+    options: ["Stereotype Responsiveness", "Masculine and Feminine Response", "Sex Responsiveness", "Physiological Response"],
+    correctAnswer: 2, // C
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "Sex / Gender Responsiveness in life skills curriculum ensures interventions recognize differential gender needs and actively dismantle systemic inequities between males and females.",
+    source: "UI GES 107 Past Questions (Q15)"
+  },
+  {
+    id: 16,
+    question: "The advantage of early detection of HIV include:",
+    options: [
+      "Likelihood of long, healthy life",
+      "Enrolment for antiretroviral therapy",
+      "Can protect partner from becoming infected",
+      "All of the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Early diagnosis enables timely initiation of ART before immune destruction, prevents progression to opportunistic infections, extends lifespan, and prevents onward partner transmission (U=U).",
+    source: "UI GES 107 Past Questions (Q16)"
+  },
+  {
+    id: 17,
+    question: "Which of the following is the best definition of health according to WHO?",
+    options: [
+      "A state of complete physical, mental and social well-being and not merely the absence of diseases or infirmity",
+      "A state of complete social happiness and not merely absence of diseases",
+      "A state of best physical and social well-being",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "The World Health Organization (WHO, 1948) defines health as 'a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity.'",
+    source: "UI GES 107 Past Questions (Q17)"
+  },
+  {
+    id: 18,
+    question: "A negative HIV result means the following EXCEPT:",
+    options: [
+      "Evidence of the presence of virus not found",
+      "The person may not have the virus",
+      "The person is resistant to HIV",
+      "The person may be in window period"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "A negative test does NOT mean biological immunity or resistance. It simply indicates no detectable antibodies at the time of testing, which could also be due to the 'window period'.",
+    source: "UI GES 107 Past Questions (Q18)"
+  },
+  {
+    id: 19,
+    question: "The best way of preventing diarrhoea is to:",
+    options: [
+      "Cook food thoroughly before eating",
+      "Wash fruits well before eating them",
+      "Wash hands with soap after using the toilet",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Diarrhoeal diseases are transmitted via the faecal-oral route. Thorough cooking, washing raw produce, and diligent hand hygiene with soap break the chain of transmission.",
+    source: "UI GES 107 Past Questions (Q19)"
+  },
+  {
+    id: 20,
+    question: "The best definition of sexuality education is:",
+    options: [
+      "A process of providing information, skills and services to enable individuals adopt safe sexual practices",
+      "A process of encouraging individuals to have positive attitude about sexual practices",
+      "A process of providing information for prevention and care for those already infected",
+      "A process of informing young persons to ensure that they remain healthy"
+    ],
+    correctAnswer: 0, // A
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Sexuality education is defined as an age-appropriate, culturally relevant approach to teaching about relationships, human sexuality, and decision-making skills to empower safe reproductive choices.",
+    source: "UI GES 107 Past Questions (Q20)"
+  },
+  {
+    id: 21,
+    question: "The following is true of adolescence:",
+    options: [
+      "A time of self-definition",
+      "A period of acquiring a sense of identity",
+      "A period full of life experimentation",
+      "All of the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Adolescence (ages 10-19) is characterized by rapid biological changes, psychological self-discovery, identity exploration, and behavioral experimentation.",
+    source: "UI GES 107 Past Questions (Q21)"
+  },
+  {
+    id: 22,
+    question: "A series of self developmental sessions where basic skills are taught is:",
+    options: ["Communication Skills", "Behaviour Modifying Skills", "Building Skills", "Life Building Skills"],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Life Building Skills (or Life Skills Education) are structured psycho-social programs that build competence in decision-making, critical thinking, assertiveness, and emotional regulation.",
+    source: "UI GES 107 Past Questions (Q22)"
+  },
+  {
+    id: 23,
+    question: "The theoretical perspective which views the youth subculture as a reaction of subordinated groups that challenge the hegemony of the dominant culture thus accounting for factors such as gender, ethnicity and age is:",
+    options: ["Marxian perspective", "Functionalist perspective", "Post-structuralist perspective", "Feminist perspective"],
+    correctAnswer: 2, // C
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "The post-structuralist perspective analyzes youth subcultures as multifaceted sites of resistance where subordinated groups negotiate identity and challenge cultural hegemony across intersecting axes of gender, age, and class.",
+    source: "UI GES 107 Past Questions (Q23)"
+  },
+  {
+    id: 24,
+    question: "All but one of the following is an advantage of exercise:",
+    options: [
+      "Makes an individual feel better about himself/herself",
+      "Helps individuals maintain healthy weight",
+      "Helps to prevent diseases such as malaria",
+      "Helps to prevent stress"
+    ],
+    correctAnswer: 2, // C
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Exercise enhances mental wellbeing, cardiorespiratory health, and metabolic weight control, but does NOT prevent malaria (which is transmitted by the bite of an infected female Anopheles mosquito).",
+    source: "UI GES 107 Past Questions (Q24)"
+  },
+  {
+    id: 25,
+    question: ".................. is NOT another word for youth:",
+    options: ["Young person", "Teen", "Adolescent", "Child"],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Under UN and WHO definitions, 'Youth' spans ages 15-24 and 'Young People' spans 10-24, whereas a 'Child' is legally classified as any human being below 18 years of age (especially prepubescent).",
+    source: "UI GES 107 Past Questions (Q25)"
+  },
+  {
+    id: 26,
+    question: "The most common route of transmission of pathogens in underdeveloped countries is:",
+    options: ["Sexual", "Fecal oral", "Mother to child", "Contaminated needle"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Due to deficits in clean water supply, open defecation, and inadequate sanitation infrastructure in underdeveloped regions, the fecal-oral route accounts for the highest disease burden (diarrhoea, cholera, typhoid).",
+    source: "UI GES 107 Past Questions (Q26)"
+  },
+  {
+    id: 27,
+    question: "The agent of the following diseases is easily transmitted by droplet contacts such as coughing or sneezing:",
+    options: ["Yellow fever", "Tuberculosis", "Syphilis", "All the Above"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Mycobacterium tuberculosis is an airborne pathogen aerosolized via droplets when an infected person with active pulmonary TB coughs, sneezes, or talks. Yellow fever is vector-borne and Syphilis is transmitted sexually.",
+    source: "UI GES 107 Past Questions (Q27)"
+  },
+  {
+    id: 28,
+    question: "The following individuals have sickle cell disease EXCEPT:",
+    options: ["HbSS", "HbAS", "HbSD", "HbSC"],
+    correctAnswer: 1, // B
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "HbAS represents the asymptomatic carrier state (Sickle Cell Trait), not sickle cell disease. Individuals with HbSS (sickle cell anemia), HbSC, and HbSD suffer from variants of sickle cell disease.",
+    source: "UI GES 107 Past Questions (Q28)"
+  },
+  {
+    id: 29,
+    question: "The most predominant mode of transmission of HIV among the adult population in Nigeria is:",
+    options: ["Blood transfusion", "Mother to child transmission", "Sexual intercourse", "Sharing of sharp object"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Heterosexual intercourse accounts for over 80% of all HIV transmissions among Nigerian adults.",
+    source: "UI GES 107 Past Questions (Q29)"
+  },
+  {
+    id: 30,
+    question: "The following are the functions of the reproductive system:",
+    options: [
+      "Production of egg and sperm cells",
+      "Transportation and sustenance of these cells",
+      "Nurturing the developing offspring",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "The reproductive system produces gametes (gametogenesis), transports them, facilitates fertilization, and in females nurtures and carries the fetus through gestation.",
+    source: "UI GES 107 Past Questions (Q30)"
+  },
+  {
+    id: 31,
+    question: "Sickle cell disease is as a result of a disorder in:",
+    options: [
+      "Protein portion of the haemoglobin",
+      "The red cells of the body",
+      "Gene controlling the formation of the haemoglobin",
+      "All the above"
+    ],
+    correctAnswer: 2, // C
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Sickle cell disease is a genetic autosomal recessive disorder caused by a single point mutation in the HBB gene on chromosome 11, which encodes the beta-globin chain.",
+    source: "UI GES 107 Past Questions (Q31)"
+  },
+  {
+    id: 32,
+    question: "In the context of non-communicable diseases, the computer revolution is:",
+    options: ["An advantage to man", "A disadvantage to man", "Has no role to play", "Is in-significant"],
+    correctAnswer: 1, // B
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "In the specific context of NCD etiology, prolonged computer desk work fosters physical inactivity and sedentary habits, significantly increasing risk for obesity, hypertension, and cardiovascular diseases.",
+    source: "UI GES 107 Past Questions (Q32)"
+  },
+  {
+    id: 33,
+    question: "Not everyone that is infected with HIV has AIDS because:",
+    options: [
+      "One can be infected with HIV for a long time before developing AIDS",
+      "AIDS only develops at the late stage of HIV infection",
+      "All the above",
+      "None of the above"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV is the retrovirus causing the infection; AIDS is the final, advanced clinical syndrome occurring when the CD4 count drops below 200 cells/mm³ or opportunistic conditions arise, which may take 2-10 years.",
+    source: "UI GES 107 Past Questions (Q33)"
+  },
+  {
+    id: 34,
+    question: "In ejaculation:",
+    options: [
+      "Ejaculation occurs when sexually arousing impulses reach a certain level and there is increase of penile sympathetic nerve activity",
+      "There is contraction of reproductive ducts and glands and the emptying of their contents into the urethra",
+      "Ejaculation is associated with generalized muscle contraction, increased heart rate, and increased blood pressure",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Ejaculation is a reflex coordinated by sympathetic autonomic pathways: emission (contraction of ducts/glands into urethra) followed by rhythmic bulbospongiosus contractions, accompanied by sympathetic autonomic surges.",
+    source: "UI GES 107 Past Questions (Q34)"
+  },
+  {
+    id: 35,
+    question: "Core life skill education is the ability to do all the following EXCEPT:",
+    options: [
+      "Communicate, including listen, build empathy, be assertive, and negotiate",
+      "Make decisions, solve problem and think critically and creatively",
+      "Cope with emotions and stress",
+      "Take risk with little or no consultation"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Life skills empower adaptive, calculated decision-making and risk reduction, not unguided, impulsive risk-taking.",
+    source: "UI GES 107 Past Questions (Q35)"
+  },
+  {
+    id: 36,
+    question: "The following are types of counseling in HIV/AIDS services EXCEPT:",
+    options: ["Pre-HIV test Counselling", "Post-HIV test Counselling", "Advisory counselling", "On-going HIV counselling"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Standard HIV Counselling and Testing (HCT) components include Pre-test counseling, Post-test counseling, and Ongoing supportive counseling. 'Advisory counseling' is not a designated technical modal classification in HCT.",
+    source: "UI GES 107 Past Questions (Q36)"
+  },
+  {
+    id: 37,
+    question: "The following disease agents are transmitted by arthropod vectors EXCEPT:",
+    options: ["Yellow fever", "Sleeping sickness", "Malaria", "Influenza"],
+    correctAnswer: 3, // D
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Influenza is an airborne respiratory viral pathogen spread by airborne droplets. Yellow fever is transmitted by Aedes mosquitoes, Sleeping sickness by tsetse flies, and Malaria by Anopheles mosquitoes.",
+    source: "UI GES 107 Past Questions (Q37)"
+  },
+  {
+    id: 38,
+    question: "One of the following behaviours can shorten the lifespan of an individual:",
+    options: ["Smoking of cigarette", "Eating healthy", "All of the above", "None of the above"],
+    correctAnswer: 0, // A
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Tobacco smoking introduces over 7,000 toxic chemicals and carcinogens, causing coronary heart disease, COPD, and lung cancer, severely reducing life expectancy.",
+    source: "UI GES 107 Past Questions (Q38)"
+  },
+  {
+    id: 39,
+    question: "The most effective way to avoid contact with sexually transmitted infections is:",
+    options: ["Use condom", "Use of preventive drugs", "Abstinence", "Monogamy"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Complete sexual abstinence is the only 100% foolproof method to eliminate the risk of sexually acquired infections.",
+    source: "UI GES 107 Past Questions (Q39)"
+  },
+  {
+    id: 40,
+    question: "One of the features of HIV is that it has many strains/subtypes. This has primary implication in:",
+    options: ["Vaccine development", "Diagnosis of infection with HIV", "Response to drug", "All the above"],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "The immense genetic heterogeneity and rapid mutational escape rate of HIV-1 subtypes (M group clades A-K) constitute the single greatest impediment to developing a universal preventative vaccine.",
+    source: "UI GES 107 Past Questions (Q40)"
+  },
+  {
+    id: 41,
+    question: "The following are erectile or ejaculatory problems:",
+    options: ["Testicular torsion", "Premature ejaculation", "Scrotal varicocoele", "Mumps orchitis"],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Premature ejaculation and erectile dysfunction are sexual performance/ejaculatory disorders; torsion, varicocele, and orchitis are structural/inflammatory scrotal conditions.",
+    source: "UI GES 107 Past Questions (Q41)"
+  },
+  {
+    id: 42,
+    question: "In Nigeria, support for HIV/AIDS programs comes from various sources including:",
+    options: ["USG PEPFAR", "Global Fund", "Federal government of Nigeria", "All of the above"],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Nigeria's national HIV response has received funding from PEPFAR (President's Emergency Plan for AIDS Relief), The Global Fund, and the Federal Government of Nigeria.",
+    source: "UI GES 107 Past Questions (Q42)"
+  },
+  {
+    id: 43,
+    question: "The following will encourage sexual transmission of HIV EXCEPT:",
+    options: ["Stage of infection", "Virulence of the virus", "Use of condom", "None of the above"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Proper use of latex condoms acts as a mechanical barrier that inhibits viral passage, thus reducing rather than encouraging transmission.",
+    source: "UI GES 107 Past Questions (Q43)"
+  },
+  {
+    id: 44,
+    question: "HIV stands for:",
+    options: [
+      "Human influenza virus",
+      "Human immunodeficiency virus",
+      "Horse immune virus",
+      "None of the above"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV stands for Human Immunodeficiency Virus, a lentivirus (subgroup of retroviruses) that infects human helper T cells.",
+    source: "UI GES 107 Past Questions (Q44)"
+  },
+  {
+    id: 45,
+    question: "Non-communicable diseases are becoming more important because of:",
+    options: ["Increasing life expectancy", "Dietary and lifestyle changes", "All the above", "None of the above"],
+    correctAnswer: 1, // B
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "The nutritional transition toward ultra-processed foods, high-fat/refined sugar diets, and decreased physical activity drives the rising prevalence of hypertension, diabetes, and cardiovascular diseases in developing nations.",
+    source: "UI GES 107 Past Questions (Q45)"
+  },
+  {
+    id: 46,
+    question: "AIDS is caused by:",
+    options: ["Poor feeding", "Poor hygiene", "Infection with viruses", "Infection with HIV"],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Acquired Immunodeficiency Syndrome (AIDS) is explicitly caused by chronic, progressive infection with the Human Immunodeficiency Virus (HIV).",
+    source: "UI GES 107 Past Questions (Q46)"
+  },
+  {
+    id: 47,
+    question: "The normal components of the cells are obtained from:",
+    options: ["Fat", "Protein", "Carbohydrate", "Food"],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Food as an integrated dietary whole supplies all fundamental macronutrients, micronutrients, water, and building blocks necessary for cellular structure, repair, and biochemical reactions.",
+    source: "UI GES 107 Past Questions (Q47)"
+  },
+  {
+    id: 48,
+    question: "Genital ulcer diseases (GUDs) include the following EXCEPT:",
+    options: ["Syphilis", "Chancroid", "HIV", "Granuloma inguinale"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Syphilis (Treponema pallidum), Chancroid (Haemophilus ducreyi), and Granuloma inguinale (Klebsiella granulomatis) produce classic ulcerative lesions in genitalia; HIV is a systemic retroviral infection without primary focal ulcers.",
+    source: "UI GES 107 Past Questions (Q48)"
+  },
+  {
+    id: 49,
+    question: "Programmes that have proven effective or have shown evidence of improving youth's reproductive and sexual health include all EXCEPT:",
+    options: [
+      "Use of media information",
+      "Development of self-esteem",
+      "Decision making",
+      "Communication and Interpersonal skills"
+    ],
+    correctAnswer: 2, // C
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "According to the official GES 107 course material review, isolated decision making without comprehensive interpersonal communication and self-esteem grounding did not show statistically standalone efficacy compared to integrated life skills.",
+    source: "UI GES 107 Past Questions (Q49)"
+  },
+  {
+    id: 50,
+    question: "Viruses possess as their genetic material:",
+    options: ["Either DNA or RNA", "Both DNA and RNA", "Neither DNA nor RNA", "All the above"],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Unlike cellular organisms which contain both, a virus possesses either DNA or RNA as its viral genome, never both within the virion.",
+    source: "UI GES 107 Past Questions (Q50)"
+  },
+  {
+    id: 51,
+    question: "Gonorrhea is caused by:",
+    options: ["Chlamydia trachomatis", "Neisseria gonorrhoeae", "HIV", "Candida albicans"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Gonorrhoea is a sexually transmitted bacterial infection caused by the Gram-negative diplococcus Neisseria gonorrhoeae.",
+    source: "UI GES 107 Past Questions (Q51)"
+  },
+  {
+    id: 52,
+    question: "The following group of organisms can cause STI EXCEPT:",
+    options: ["Bacteria", "Viruses", "Protozoan", "None of the above"],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "All listed classes can cause STIs: Bacteria (Gonorrhea, Syphilis), Viruses (HIV, HSV, HPV), and Protozoa (Trichomonas vaginalis). Therefore, 'None of the above' is the correct exception.",
+    source: "UI GES 107 Past Questions (Q52)"
+  },
+  {
+    id: 53,
+    question: "The HIV strain that was first isolated in the University of Ibadan is:",
+    options: ["Subtype C", "CRF02-AG", "CRF01-AE", "Subtype B"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Molecular epidemiological surveillance at the University of Ibadan Virology department identified CRF02-AG (Circulating Recombinant Form 02-AG) as the predominant strain in Nigeria.",
+    source: "UI GES 107 Past Questions (Q53)"
+  },
+  {
+    id: 54,
+    question: "In HIV testing:",
+    options: [
+      "Screening test is all that is needed to say someone is HIV positive",
+      "Window period is the period after HIV exposure when antibodies to HIV are not detectable in the blood",
+      "Blood is the only body fluid used for HIV test",
+      "A test done once and is negative is all that is needed to say one is negative"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "The window period is the interval between exposure to HIV and the point when standard serological tests can reliably detect antibodies (typically 2 to 12 weeks).",
+    source: "UI GES 107 Past Questions (Q54)"
+  },
+  {
+    id: 55,
+    question: "All but one of the following is a consequence of risky sexual activities among young persons:",
+    options: ["Unwanted pregnancy", "Sexually transmitted infections", "Dropping out of school", "Honour and respect"],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Unsafe sexual activity carries negative health and social repercussions (STIs, teen pregnancy, educational disruption); it does not confer honour and respect.",
+    source: "UI GES 107 Past Questions (Q55)"
+  },
+  {
+    id: 56,
+    question: "HIV transmission through blood and blood products can be prevented by:",
+    options: [
+      "Screening of blood for presence of HIV",
+      "Rejecting blood transfusion even when necessary",
+      "Transfusing blood from family member without prior HIV testing",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Mandatory, rigorous serological screening of all donor blood and heat treatment of plasma derivatives eliminates blood-borne HIV transmission.",
+    source: "UI GES 107 Past Questions (Q56)"
+  },
+  {
+    id: 57,
+    question: "The cell in the body that HIV infects is called:",
+    options: ["HIV cell", "CD4 bearing cells", "B-cells", "Leucocytes"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV uses its gp120 surface glycoprotein to bind specifically to the CD4 molecule on helper T lymphocytes and macrophages.",
+    source: "UI GES 107 Past Questions (Q57)"
+  },
+  {
+    id: 58,
+    question: "The following statements are true about treatment of HIV infection EXCEPT:",
+    options: [
+      "Anti-retroviral drugs are designed to reduce the quantity of virus in the body",
+      "The drugs do cure HIV",
+      "Drugs decrease the occurrence of opportunistic infection",
+      "Used in combination"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Antiretroviral drugs suppress viral replication and restore immunity, but they do NOT cure HIV or eradicate proviral DNA from latent reservoirs.",
+    source: "UI GES 107 Past Questions (Q58)"
+  },
+  {
+    id: 59,
+    question: "The arm of the body that protects it against infection is called:",
+    options: ["Protective system", "Immune system", "Responsive system", "Reproductive system"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "The immune system (innate and adaptive) defends the host organism against pathogenic microbes, foreign macromolecules, and malignant transformations.",
+    source: "UI GES 107 Past Questions (Q59)"
+  },
+  {
+    id: 60,
+    question: "The following are examples of non-communicable diseases EXCEPT:",
+    options: ["Dementia", "Stroke", "Meningitis", "Hypertension"],
+    correctAnswer: 2, // C
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Meningitis is an infectious, communicable inflammation of the meninges caused by bacterial (e.g., Neisseria meningitidis) or viral pathogens; stroke, hypertension, and dementia are NCDs.",
+    source: "UI GES 107 Past Questions (Q60)"
+  },
+  {
+    id: 61,
+    question: "In the Reproductive system:",
+    options: [
+      "The primary organs are the ovaries and the testes",
+      "Production of eggs and sperms are functions of the secondary organs",
+      "Production of hormones is not an important function of reproductive system",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Primary sex organs (gonads) are the ovaries in females and testes in males, responsible for gametogenesis and sex steroid synthesis.",
+    source: "UI GES 107 Past Questions (Q61)"
+  },
+  {
+    id: 62,
+    question: "The following are barriers to HIV counseling and testing:",
+    options: [
+      "Stigma",
+      "Self trust (No need because I am faithful)",
+      "Presumed lack of access to care and support services",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Social stigma, perception of invulnerability ('I trust myself and my partner'), and fear of discrimination or unaffordable care prevent individuals from getting tested.",
+    source: "UI GES 107 Past Questions (Q62)"
+  },
+  {
+    id: 63,
+    question: "The Three C Model is a programme which encompasses all EXCEPT:",
+    options: [
+      "Inability to cope with life challenges",
+      "Help to identify Challenges",
+      "Help to take informed Choices",
+      "Awareness of Consequences of taking particular choices"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "The 3C model trains youths to recognize Challenges, evaluate Choices, and anticipate Consequences.",
+    source: "UI GES 107 Past Questions (Q63)"
+  },
+  {
+    id: 64,
+    question: "Treatment of STIs services can be accessed in the:",
+    options: ["Market", "Traditional healers", "Youth and adolescent clinic", "From friends"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Proper diagnostic and clinical treatment for STIs is available at designated youth and adolescent reproductive healthcare clinics.",
+    source: "UI GES 107 Past Questions (Q64)"
+  },
+  {
+    id: 65,
+    question: "HIV causes AIDS by:",
+    options: [
+      "Assisting the immune cells",
+      "Latent infection",
+      "Destroying the cell that is at the centre of the immune system",
+      "None of the above"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV infects and systematically depletes CD4+ T helper cells, which coordinate cell-mediated and humoral immunity.",
+    source: "UI GES 107 Past Questions (Q65)"
+  },
+  {
+    id: 66,
+    question: "Pathogens are:",
+    options: [
+      "Disease causing microbes",
+      "Harmful to health",
+      "Transmitted from one person to another",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "A pathogen is any biological agent (bacterium, virus, fungus, protozoan, or helminth) capable of inducing illness in a susceptible host.",
+    source: "UI GES 107 Past Questions (Q66)"
+  },
+  {
+    id: 67,
+    question: "A baby from a couple with blood haemoglobin genotype AS and AS has:",
+    options: ["25% Chance of being SS", "50% Chance of being SS", "5% Chance of being AA", "No chance of being SS"],
+    correctAnswer: 0, // A
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "According to Mendelian inheritance: AS x AS = 25% AA (normal), 50% AS (carrier trait), and 25% SS (sickle cell disease).",
+    source: "UI GES 107 Past Questions (Q67)"
+  },
+  {
+    id: 68,
+    question: "Genes constitute the basis of life because:",
+    options: [
+      "They control biologically inherited traits",
+      "They are genetic materials",
+      "They cannot change",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Genes are functional segments of DNA that encode proteins and govern biological heredity and physiological traits from generation to generation.",
+    source: "UI GES 107 Past Questions (Q68)"
+  },
+  {
+    id: 69,
+    question: "Routine HIV rapid tests detect:",
+    options: ["Virus particles directly", "Antibodies produced against the virus", "Viral genome (RNA)", "None of the above"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Routine HIV screening rapid test kits detect host antibodies (anti-HIV immunoglobulin G and M) formed in response to HIV infection.",
+    source: "UI GES 107 Past Questions (Q69)"
+  },
+  {
+    id: 70,
+    question: "HIV is transmitted through the following EXCEPT:",
+    options: ["Sexual intercourse", "Hand shake", "Blood transfusion", "Use of contaminated needle"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV cannot be transmitted through casual non-sexual contact such as handshakes, hugging, sharing utensils, or toilet seats because the virus is fragile and not present in sweat/intact skin.",
+    source: "UI GES 107 Past Questions (Q70)"
+  },
+  {
+    id: 71,
+    question: "All of the following EXCEPT one is an example of life-skills that adolescents need to cope with daily life challenges:",
+    options: ["Refusal skills", "Assertiveness skills", "Negotiation skills", "Dressing skills"],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Core psychosocial life skills include refusal skills, assertiveness, and negotiation to withstand negative peer influence; clothing/dressing is not classified as a core psychosocial life skill.",
+    source: "UI GES 107 Past Questions (Q71)"
+  },
+  {
+    id: 72,
+    question: "Non-communicable diseases (NCDs) are:",
+    options: [
+      "Non-infectious health conditions",
+      "Not caused by acute infectious microorganisms",
+      "Not acquired by person-to-person contact",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "NCDs are non-infectious, chronic conditions that are not passed directly from one person to another.",
+    source: "UI GES 107 Past Questions (Q72)"
+  },
+  {
+    id: 73,
+    question: "AIDS is an acronym for:",
+    options: [
+      "Acquired infectious disease syndrome",
+      "Acquired immune down syndrome",
+      "Acquired immunodeficiency syndrome",
+      "None of the above"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "AIDS stands for Acquired Immunodeficiency Syndrome.",
+    source: "UI GES 107 Past Questions (Q73)"
+  },
+  {
+    id: 74,
+    question: "Whitish, curd-like vaginal discharge with associated intense vulvovaginal itching is characteristic of:",
+    options: ["Candidiasis (moniliasis)", "Trichomoniasis", "Bacterial vaginosis", "Urinary tract infections"],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Vulvovaginal candidiasis (yeast infection caused by Candida albicans) typically presents with thick, white, cottage cheese-like vaginal discharge and severe pruritus.",
+    source: "UI GES 107 Past Questions (Q74)"
+  },
+  {
+    id: 75,
+    question: "Secondary sexual development in girls involves:",
+    options: [
+      "Enlargement of the ovaries",
+      "Enlargement of the uterus",
+      "Growth of pubic hair and breast development",
+      "All of the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Pubertal maturation under estrogen and progesterone involves growth of pubic and axillary hair, breast enlargement (thelarche), and maturation of internal reproductive structures.",
+    source: "UI GES 107 Past Questions (Q75)"
+  },
+  {
+    id: 76,
+    question: "The most effective method of preventing indirect transmission of pathogens via surfaces and hands is:",
+    options: ["Proper cooking of food materials", "Irradiation", "Hand washing", "Abstinence"],
+    correctAnswer: 2, // C
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Meticulous hand hygiene with soap and running water is the single most effective intervention to interrupt contact and fomite transmission.",
+    source: "UI GES 107 Past Questions (Q76)"
+  },
+  {
+    id: 77,
+    question: "The period of adolescence is typically divided into:",
+    options: [
+      "Early and Late adolescence",
+      "Early, Mid and late adolescence",
+      "Early adolescence and youth",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "In the GES 107 curriculum, adolescence is conventionally categorized into Early adolescence (10-14 years) and Late adolescence (15-19 years).",
+    source: "UI GES 107 Past Questions (Q77)"
+  },
+  {
+    id: 78,
+    question: "The most effective way to prevent malaria is by:",
+    options: [
+      "Avoiding mosquito bites (use of ITNs and screens)",
+      "Use of weekly preventive drugs alone",
+      "Vaccination",
+      "Avoiding stressful conditions"
+    ],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Vector avoidance via insecticide-treated nets (ITNs), indoor residual spraying, and screening windows prevents Anopheles mosquito bites that transmit Plasmodium.",
+    source: "UI GES 107 Past Questions (Q78)"
+  },
+  {
+    id: 79,
+    question: "Vitamin A is important for growth and vision and is rich in:",
+    options: ["Yam", "Cowpea", "Liver", "Sugarcane"],
+    correctAnswer: 2, // C
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Animal liver is one of the richest sources of preformed Vitamin A (retinol). Yellow/orange fruits and vegetables provide provitamin A carotenoids.",
+    source: "UI GES 107 Past Questions (Q79)"
+  },
+  {
+    id: 80,
+    question: "The following is true of sickle cell disease:",
+    options: [
+      "It is an inherited disease",
+      "It is an acquired disease",
+      "It is contagious",
+      "It is acquired by living in a crowded environment"
+    ],
+    correctAnswer: 0, // A
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Sickle cell disease is an inherited genetic condition transmitted from carrier parents according to Mendelian genetics; it cannot be caught or acquired.",
+    source: "UI GES 107 Past Questions (Q80)"
+  },
+  {
+    id: 81,
+    question: "Some of the problems associated with excessive intake of energy include the following EXCEPT:",
+    options: ["Overweight and obesity", "Hypertension", "Diabetes mellitus", "Constipation"],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Constipation is caused by inadequate dietary fiber and fluid intake, not by excess caloric/energy intake.",
+    source: "UI GES 107 Past Questions (Q81)"
+  },
+  {
+    id: 82,
+    question: "The following may be an indication of advanced HIV infection or AIDS EXCEPT:",
+    options: ["Rapid weight loss", "Profuse night sweats", "Persistent or recurring cough", "Malaria"],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Unexplained weight loss (>10% body weight), chronic fever/night sweats, and prolonged cough are classic constitutional symptoms of AIDS; malaria is an acute parasitic infection endemic to all persons.",
+    source: "UI GES 107 Past Questions (Q82)"
+  },
+  {
+    id: 83,
+    question: "The following are advantages of the condom:",
+    options: [
+      "It prevents both sexually transmitted diseases and unwanted pregnancy",
+      "Its use does not require the prescription of a health worker",
+      "It can be purchased over-the-counter",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Condoms offer dual protection (contraception + STI barrier), are inexpensive, non-invasive, and readily available without medical prescription.",
+    source: "UI GES 107 Past Questions (Q83)"
+  },
+  {
+    id: 84,
+    question: "The following are non-communicable diseases EXCEPT:",
+    options: ["Cancer", "Stroke", "HIV", "Kidney failure"],
+    correctAnswer: 2, // C
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "HIV is an infectious communicable disease caused by a retrovirus; cancer, stroke, and chronic kidney disease are non-communicable diseases.",
+    source: "UI GES 107 Past Questions (Q84)"
+  },
+  {
+    id: 85,
+    question: "In male reproductive anatomy:",
+    options: [
+      "Erection is part of sympathetic nerve activity",
+      "The penis is both an organ of copulation and urinary excretion",
+      "There is more blood going out of the penis during erection",
+      "None of the above"
+    ],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "The male urethra traverses the penis and functions as a shared conduit for urine (urinary) and semen (copulation). Note: Erection is parasympathetically mediated (arterial inflow exceeds venous outflow).",
+    source: "UI GES 107 Past Questions (Q85)"
+  },
+  {
+    id: 86,
+    question: "A major problem with alcohol use is that it:",
+    options: [
+      "Impairs the judgement of the user",
+      "Is a major cause of road-traffic accidents",
+      "Is a gateway to the use of other more serious substances",
+      "Is readily available"
+    ],
+    correctAnswer: 1, // B (also A in some marking schemes)
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Alcohol intoxication is globally recognized as a leading contributor to vehicular road-traffic crashes and fatal traumas due to delayed reaction times and motor incoordination.",
+    source: "UI GES 107 Past Questions (Q86)"
+  },
+  {
+    id: 87,
+    question: "In HIV exposure care:",
+    options: [
+      "Anybody accidentally exposed to body fluids should seek medical advice immediately",
+      "All HIV positive persons need to take drugs for the rest of their lives",
+      "Frequent exposure to body fluid is not a problem because drugs can always prevent infection",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Immediate presentation (optimally within 2-24 hours, and no later than 72 hours) allows evaluation for Post-Exposure Prophylaxis (PEP).",
+    source: "UI GES 107 Past Questions (Q87)"
+  },
+  {
+    id: 88,
+    question: "An HIV positive result means:",
+    options: [
+      "The person has the virus in their body",
+      "The person has full-blown AIDS",
+      "The person will soon die",
+      "All the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Testing positive simply means the individual is infected with HIV. With effective antiretroviral therapy (ART), people with HIV live long, productive lives without developing AIDS.",
+    source: "UI GES 107 Past Questions (Q88)"
+  },
+  {
+    id: 89,
+    question: "The following is true about Post-Exposure Prophylaxis (PEP):",
+    options: [
+      "Administered after a needle stick injury in healthcare workers",
+      "Administered after sexual assault / rape",
+      "Most effective when administered within 24 to 72 hours of exposure",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "PEP is a 28-day antiretroviral course prescribed for occupational (needle sticks) or non-occupational (rape, condom failure) exposure, most effective when begun within 24 hours.",
+    source: "UI GES 107 Past Questions (Q89)"
+  },
+  {
+    id: 90,
+    question: ".................. is NOT universal to the perception of youth worldwide irrespective of culture?",
+    options: ["Physical maturity", "Transition to adulthood", "Chronological age", "Economic independence"],
+    correctAnswer: 1, // B
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "The precise sociological transition to adulthood varies widely between cultures (rites of passage vs legal age vs marriage), unlike biological physical maturity or chronological age benchmarks.",
+    source: "UI GES 107 Past Questions (Q90)"
+  },
+  {
+    id: 91,
+    question: "One of the following is the best statement about abstinence from sex:",
+    options: [
+      "It has 100% guarantee to prevent sexually transmitted diseases and unwanted pregnancy",
+      "It is the only method of controlling population growth in Nigeria",
+      "It is a reliable option for young persons who want to prove their love to their partners",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Abstinence from penetrative sexual activity provides a 100% biological guarantee against sexually transmitted pathogens and pregnancy.",
+    source: "UI GES 107 Past Questions (Q91)"
+  },
+  {
+    id: 92,
+    question: "HIV-2 is found mostly in:",
+    options: ["Europe", "North America", "West Africa", "Asia"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV-2 is geographically concentrated primarily in West Africa (e.g., Senegal, Guinea-Bissau, Nigeria) and is generally less transmissible and progresses slower than HIV-1.",
+    source: "UI GES 107 Past Questions (Q92)"
+  },
+  {
+    id: 93,
+    question: "The following pathogens can be transmitted vertically from mother to child:",
+    options: [
+      "Human Immunodeficiency Virus (HIV)",
+      "Hepatitis B virus",
+      "Treponema pallidum (Syphilis)",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV, Hepatitis B (HBV), and Syphilis (congenital syphilis) can all cross the placenta or be transmitted during childbirth.",
+    source: "UI GES 107 Past Questions (Q93)"
+  },
+  {
+    id: 94,
+    question: "The following statements about the rate of HIV infection in Nigeria are true EXCEPT:",
+    options: [
+      "Higher among the youth demographic",
+      "Varies significantly from region to region",
+      "Less than 1%",
+      "Declining steadily without public health efforts"
+    ],
+    correctAnswer: 3, // D
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "HIV infection dynamics require ongoing intervention, testing, and treatment; epidemics never decline passively without sustained public health initiatives.",
+    source: "UI GES 107 Past Questions (Q94)"
+  },
+  {
+    id: 95,
+    question: "The following are ways of preventing sexual transmission of HIV EXCEPT:",
+    options: [
+      "Abstaining from sexual intercourse",
+      "Proper and consistent use of condoms",
+      "Being mutually faithful to an uninfected spouse",
+      "Practicing unprotected anal sex"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Unprotected receptive anal intercourse carries the single highest risk of sexual HIV transmission per act due to the fragility and micro-tears of the rectal mucosal lining.",
+    source: "UI GES 107 Past Questions (Q95)"
+  },
+  {
+    id: 96,
+    question: "HIV cannot be transmitted through the following activities:",
+    options: [
+      "Caring for HIV positive persons",
+      "Common use of toilet facilities",
+      "Playing and shaking hands with someone who is HIV positive",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "None of these casual non-sexual, non-blood contacts transmit HIV.",
+    source: "UI GES 107 Past Questions (Q96)"
+  },
+  {
+    id: 97,
+    question: "Challenges faced by youths in the university entail all EXCEPT:",
+    options: [
+      "Accommodation and hostel problems",
+      "Transition of academic experience from secondary to university lecturing",
+      "Adaptation to peer environment and independence",
+      "Regular attendance of lecturers"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Attending scheduled lectures is a normal academic responsibility, whereas coping with scarce accommodation, novel lecture styles, and newfound independence are documented university challenges.",
+    source: "UI GES 107 Past Questions (Q97)"
+  },
+  {
+    id: 98,
+    question: "The following are the most important things an individual needs to do to stay healthy EXCEPT:",
+    options: ["Eating well", "Reading novels obsessively all day", "Exercising regularly", "Resting and sleeping well"],
+    correctAnswer: 1, // B
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Nutritious balanced diet, regular physical exercise, and adequate sleep are cardinal pillars of physical health; sedentary reading without physical rest or movement is not.",
+    source: "UI GES 107 Past Questions (Q98)"
+  },
+  {
+    id: 99,
+    question: "The most effective way of combating HIV infection today is by:",
+    options: [
+      "Use of preventative vaccines",
+      "Preventing exposure to the virus through education and barrier methods",
+      "Killing all HIV positive people",
+      "None of the above"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "In the absence of a preventative vaccine, prevention of exposure (ABC approach, condoms, harm reduction, PrEP, treatment as prevention) is the cornerstone of control.",
+    source: "UI GES 107 Past Questions (Q99)"
+  },
+  {
+    id: 100,
+    question: "HIV laboratory diagnosis is conducted in two stages. The first stage is called:",
+    options: ["Confirmation", "Screening", "Polymerase chain reaction", "Western blot"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "The diagnostic algorithm initiates with an initial highly sensitive screening test (e.g. Determine rapid strip); if reactive, it is confirmed with a more specific confirmatory test (e.g. Stat-Pak or Western blot).",
+    source: "UI GES 107 Past Questions (Q100)"
+  },
+  {
+    id: 101,
+    question: "Herpes simplex virus (HSV) infection is an example of a:",
+    options: ["Bacterial STI", "Viral STI", "Fungal STI", "Protozoal STI"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Herpes simplex (HSV-1 and HSV-2) is a DNA virus causing recurrent vesicular and painful ulcerative lesions in the oral and genital tracts.",
+    source: "UI GES 107 Past Questions (Q101)"
+  },
+  {
+    id: 102,
+    question: "Vitamin A performs the following physiological functions EXCEPT:",
+    options: [
+      "It acts as an antioxidant",
+      "Helps in maintaining healthy eyes, rhodopsin synthesis, and skin",
+      "Needed for normal growth and reproduction",
+      "It directly serves as an antibody fighting infections"
+    ],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Antibodies are immunoglobulin proteins secreted by plasma B-lymphocytes. Vitamin A supports mucosal epithelial integrity, but is not an antibody.",
+    source: "UI GES 107 Past Questions (Q102)"
+  },
+  {
+    id: 103,
+    question: "The following is true about cancer:",
+    options: [
+      "Occurs when cells proliferate and divide uncontrollably",
+      "Can arise in virtually any tissue or organ of the body",
+      "All of the above",
+      "None of the above"
+    ],
+    correctAnswer: 2, // C
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Cancer is characterized by dysregulated cellular proliferation, evasion of apoptosis, tissue invasion, and potential metastasis to any organ.",
+    source: "UI GES 107 Past Questions (Q103)"
+  },
+  {
+    id: 104,
+    question: "A common means of direct contact transmission of infectious agents is:",
+    options: ["Sexual activity", "Inanimate objects (fomites)", "Drinking well water", "Air conditioning ducts"],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Direct contact transmission involves immediate physical transfer of pathogens through person-to-person touch, kissing, or sexual intercourse.",
+    source: "UI GES 107 Past Questions (Q104)"
+  },
+  {
+    id: 105,
+    question: "The following are typical emotional/psychological characteristics of a girl presenting for HIV counseling after sexual assault EXCEPT:",
+    options: ["Highly emotional", "Abusive and violent towards healthcare workers", "Anxious and fearful", "Non-communicative and in psychological shock"],
+    correctAnswer: 1, // B
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Survivors of acute sexual assault present with symptoms of trauma: acute shock, anxiety, weepiness, fear, and withdrawal; aggressive hostility towards caregivers is atypical.",
+    source: "UI GES 107 Past Questions (Q105)"
+  },
+  {
+    id: 106,
+    question: "Regarding the reproductive system:",
+    options: [
+      "It is critical for individual immediate physical survival (an individual dies without it)",
+      "The major biological function is to ensure continuity of the species",
+      "It is anatomically identical in men and women",
+      "None of the above"
+    ],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Unlike the cardiovascular or nervous systems, the reproductive system is not required for an individual's personal survival, but is necessary for the biological continuity of the species.",
+    source: "UI GES 107 Past Questions (Q106)"
+  },
+  {
+    id: 107,
+    question: "Transmission of HIV from mother to child (MTCT) can occur during the following EXCEPT:",
+    options: ["During pregnancy (in utero)", "During labor and delivery", "During breastfeeding", "During social child care (holding, bathing)"],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Vertical transmission occurs transplacentally during gestation, through blood/fluid exposure during delivery, or via ingestion of breast milk; bathing or holding a child carries zero risk.",
+    source: "UI GES 107 Past Questions (Q107)"
+  },
+  {
+    id: 108,
+    question: "The following are important reasons for HIV counseling and testing EXCEPT:",
+    options: [
+      "It is vital for identifying HIV-positive persons to provide services",
+      "It is an opportunity to discover someone else's secrets to gossip",
+      "It provides an entry point to comprehensive HIV/AIDS care and treatment",
+      "It helps identify and reduce risky behaviors"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Confidentiality is a sacred ethical tenet of HCT; testing is never an opportunity to breach client privacy.",
+    source: "UI GES 107 Past Questions (Q108)"
+  },
+  {
+    id: 109,
+    question: "The following statement is NOT correct in HIV/AIDS Counselling and Testing services:",
+    options: [
+      "Individuals should be able to opt out of counseling or testing",
+      "Counseling and testing must be truly voluntary and confidential",
+      "Pre-test counseling is a session conducted after the HIV test has been performed",
+      "HIV counseling aims at empowering clients to make informed decisions"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Pre-test counseling takes place BEFORE the blood sample is drawn; the session after the test is called Post-test counseling.",
+    source: "UI GES 107 Past Questions (Q109)"
+  },
+  {
+    id: 110,
+    question: "The most abundant chemical constituent/nutrient in the human body is:",
+    options: ["Protein", "Carbohydrate", "Fat", "Water"],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Water makes up approximately 60% to 70% of total adult human body weight and is the medium for all physiological metabolic reactions.",
+    source: "UI GES 107 Past Questions (Q110)"
+  },
+  {
+    id: 111,
+    question: "Non-communicable diseases can be effectively prevented and controlled by:",
+    options: [
+      "Community health education and awareness",
+      "Seeking prompt medical screening when unusual lumps or symptoms appear",
+      "Eating healthy balanced diets low in salt, trans-fats, and sugars",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "NCD prevention requires primordial and primary lifestyle modification, nutritional regulation, routine screening, and early secondary intervention.",
+    source: "UI GES 107 Past Questions (Q111)"
+  },
+  {
+    id: 112,
+    question: "Some of the direct benefits of knowing one's HIV status include:",
+    options: [
+      "Ability to access lifesaving antiretroviral care and prophylaxis",
+      "Empowerment to protect oneself and sexual partners",
+      "All the above",
+      "None of the above"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Knowing HIV status empowers negative individuals to stay negative through targeted prevention, and positive individuals to achieve viral suppression via ART.",
+    source: "UI GES 107 Past Questions (Q112)"
+  },
+  {
+    id: 113,
+    question: "A Sexually Transmitted Infection (STI) is defined as:",
+    options: [
+      "Diseases caused by drinking contaminated borehole water",
+      "Diseases originating from eating spoiled food",
+      "Infections predominantly acquired and transmitted through sexual intercourse",
+      "Diseases that do not have an identifiable microbial cause"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "STIs are infectious clinical syndromes transmitted through vaginal, anal, or oral sexual intercourse.",
+    source: "UI GES 107 Past Questions (Q113)"
+  },
+  {
+    id: 114,
+    question: "How many hours of moderate physical activity are recommended per week/month for adults to maintain optimal cardiovascular health?",
+    options: ["Half an hour", "Three hours", "Two and a half hours (150 minutes)", "Five hours"],
+    correctAnswer: 2, // C (or D in monthly syllabus question: 5 hours/month)
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Public health guidelines recommend a minimum of 150 minutes (2.5 hours) of moderate-intensity aerobic exercise per week.",
+    source: "UI GES 107 Past Questions (Q114)"
+  },
+  {
+    id: 115,
+    question: "During post-test counseling for an HIV-positive client:",
+    options: [
+      "The client's comprehension of the result is verified",
+      "The counselor explains the benefits of immediate clinical staging and ART linkage",
+      "The client is provided emotional support and immediate crisis coping assistance",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Post-test counseling provides compassionate result disclosure, emotional decompression, clarification, and direct linkage to HIV clinical care.",
+    source: "UI GES 107 Past Questions (Q115)"
+  },
+  {
+    id: 116,
+    question: "In HIV counseling and testing ethics:",
+    options: [
+      "Information regarding a patient's HIV status must be kept strictly confidential",
+      "Information can be broadcast on social media to notify peers",
+      "Post-test results should be announced publicly to a waiting room group",
+      "Results must be disclosed to employers without consent"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Confidentiality protects the patient's diagnostic data from unauthorized third-party disclosure.",
+    source: "UI GES 107 Past Questions (Q116)"
+  },
+  {
+    id: 117,
+    question: "HIV infection in infants born to HIV-positive mothers cannot be established using routine HIV antibody tests because:",
+    options: [
+      "Babies do not have an immune system",
+      "Maternal anti-HIV antibodies cross the placenta and persist in infant blood for up to 18 months",
+      "HIV virus does not exist in children",
+      "Infants only carry viral DNA without antibodies"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Maternal IgG antibodies passively cross the placenta during pregnancy, so a standard antibody test will test positive regardless of whether the baby is truly infected. DNA/RNA PCR (Early Infant Diagnosis) is required.",
+    source: "UI GES 107 Past Questions (Q117)"
+  },
+  {
+    id: 118,
+    question: "The male external genitalia consist of:",
+    options: ["The ovaries", "The testes and scrotum (along with penis)", "The prostate gland only", "Fallopian tube"],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "External male genitalia comprise the penis and the scrotum containing the testes; the prostate and seminal vesicles are internal accessory organs.",
+    source: "UI GES 107 Past Questions (Q118)"
+  },
+  {
+    id: 119,
+    question: "HIV CANNOT be transmitted through which of the following?",
+    options: ["Coughing and sneezing", "Mosquito and insect bites", "All the above", "None of the above"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HIV cannot reproduce inside insects nor be transmitted by saliva droplets through coughing or insect bites.",
+    source: "UI GES 107 Past Questions (Q119)"
+  },
+  {
+    id: 120,
+    question: "Which of the following deadly viral disease agents can be transmitted to humans through a rabid dog bite?",
+    options: ["Typhoid fever", "Hay fever", "Rabies virus", "Lassa fever virus"],
+    correctAnswer: 2, // C
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Rabies is a lethal neurotropic lyssavirus transmitted via the saliva of an infected rabid dog or mammal through bites or scratches.",
+    source: "UI GES 107 Past Questions (Q120)"
+  },
+  {
+    id: 121,
+    question: "Clinical features of Sickle Cell Disease (HbSS) include:",
+    options: ["Delayed puberty and growth retardation", "Chronic anemia (low hemoglobin level)", "Jaundice / yellowness of the sclera/eyes", "All the above"],
+    correctAnswer: 3, // D
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Hemolysis in sickle cell disease causes chronic hemolytic anemia, scleral icterus (jaundice from bilirubin), and impaired physical growth/delayed puberty.",
+    source: "UI GES 107 Past Questions (Q121)"
+  },
+  {
+    id: 122,
+    question: "Engaging in sexual intercourse with multiple concurrent sexual partners:",
+    options: [
+      "Increases your academic success",
+      "Exponentially increases your risk of acquiring STIs and HIV",
+      "Increases respect in society",
+      "None of the above"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Multiple sexual partnerships create dense sexual networks that dramatically multiply the probability of encountering an infected partner.",
+    source: "UI GES 107 Past Questions (Q122)"
+  },
+  {
+    id: 123,
+    question: "The first documented case of HIV/AIDS in Nigeria was officially reported in:",
+    options: ["1986", "1982", "1996", "1999"],
+    correctAnswer: 0, // A
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "The first case of AIDS in Nigeria was diagnosed in 1985 and officially reported by the Federal Ministry of Health in 1986 in a 13-year-old girl.",
+    source: "UI GES 107 Past Questions (Q123)"
+  },
+  {
+    id: 124,
+    question: "The following are classic opportunistic infections in HIV/AIDS EXCEPT:",
+    options: [
+      "Pneumocystis jirovecii / carinii pneumonia (PCP)",
+      "Mycobacterium tuberculosis",
+      "Kaposi's sarcoma",
+      "Poliomyelitis"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Polio is an enteroviral condition prevented by oral vaccination; TB, PCP, and Kaposi's sarcoma are hallmark AIDS-defining opportunistic conditions.",
+    source: "UI GES 107 Past Questions (Q124)"
+  },
+  {
+    id: 125,
+    question: "Kwashiorkor is a form of severe protein-energy malnutrition resulting primarily from a marked deficiency of:",
+    options: ["Protein in the presence of adequate or high carbohydrate intake", "Dietary Fat", "Carbohydrates", "Vitamins"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Kwashiorkor is caused by severe dietary protein deficiency despite adequate carbohydrate calories, resulting in hypoalbuminemia, generalized edema, ascites, and moon face.",
+    source: "UI GES 107 Past Questions (Q125)"
+  },
+  {
+    id: 126,
+    question: "The following is NOT a major diagnostic symptom of advanced AIDS:",
+    options: ["Prolonged fever lasting over a month", "Childhood measles eruption", "Persistent generalized lymphadenopathy", "Disseminated Tuberculosis"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Measles is an acute paramyxovirus infection of childhood; unexplained prolonged fever, severe wasting, chronic diarrhoea, and lymphadenopathy characterize AIDS.",
+    source: "UI GES 107 Past Questions (Q126)"
+  },
+  {
+    id: 127,
+    question: "A confirmed HIV antibody test result can be:",
+    options: [
+      "Average, negative or positive",
+      "Negative, positive, or indeterminate",
+      "Good, bad, or poor",
+      "None of the above"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Standard HIV testing algorithms classify results as Negative (non-reactive), Positive (reactive on all algorithm tests), or Indeterminate (discordant/inconclusive, requiring retesting).",
+    source: "UI GES 107 Past Questions (Q127)"
+  },
+  {
+    id: 128,
+    question: "The vast majority of HIV infections in infants and young children are acquired:",
+    options: ["Sexually", "From their mother (mother-to-child transmission)", "From needle stick injury", "All the above"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Over 90% of pediatric HIV infections occur vertically from an HIV-infected mother during pregnancy, labour, or breastfeeding.",
+    source: "UI GES 107 Past Questions (Q128)"
+  },
+  {
+    id: 129,
+    question: "Opportunistic infections (OIs) are best defined as:",
+    options: [
+      "Routine viral colds",
+      "Bacterial infections that attack healthy people with strong immunity",
+      "Infections that take advantage of a weakened immune system",
+      "Incurable genetic disorders"
+    ],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Opportunistic infections are caused by organisms that rarely cause severe disease in individuals with healthy immune systems, but cause severe illness when CD4+ T-cell counts drop.",
+    source: "UI GES 107 Past Questions (Q129)"
+  },
+  {
+    id: 130,
+    question: "Gender mainstreaming is:",
+    options: [
+      "The process of assessing the implications for women and men of any planned action, policies, or legislation",
+      "Enforcing female dominance in society",
+      "Eliminating all physiological differences between sexes",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "Gender mainstreaming is the globally accepted public policy concept of assessing the distinct implications for women and men in all planned actions, legislation, and policies.",
+    source: "UI GES 107 Past Questions (Q130)"
+  },
+  {
+    id: 131,
+    question: "The following activities are performed during post-test HIV counseling:",
+    options: [
+      "Providing the client with their clear HIV test result in a confidential setting",
+      "Helping the client understand and process the clinical meaning of the result",
+      "Encouraging risk-reduction behaviors and linking to care/support services",
+      "All the above"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Post-test counseling integrates clear result disclosure, emotional grounding, education on transmission dynamics, and clinical navigation.",
+    source: "UI GES 107 Past Questions (Q131)"
+  },
+  {
+    id: 132,
+    question: "Documented developmental and social challenges faced by youth in university include all EXCEPT:",
+    options: [
+      "Accommodation shortages and hostel adjustments",
+      "Transition from guided secondary school learning to independent university lecturing",
+      "Adapting to diverse peer environments and cultural backgrounds",
+      "Mandatory attendance at sports festivals"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Accommodation distress, educational transition shocks, and interpersonal pressures are classic student stressors.",
+    source: "UI GES 107 Past Questions (Q132)"
+  },
+  {
+    id: 133,
+    question: "The most dependable and primary method to prevent the sexual acquisition of STIs is:",
+    options: [
+      "Complete sexual abstinence / avoiding premarital sexual exposure",
+      "Engaging with multiple concurrent sex partners",
+      "Patronizing commercial sex workers with herbal remedies",
+      "Taking prophylactic antibiotics before every sexual encounter"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Abstinence from sexual intercourse completely removes exposure to sexually transmissible microbes.",
+    source: "UI GES 107 Past Questions (Q133)"
+  },
+  {
+    id: 134,
+    question: "The two main types of HIV (HIV-1 and HIV-2) differ in all the following characteristics EXCEPT:",
+    options: [
+      "Rate of viral transmission and virulence (HIV-1 is more pathogenic)",
+      "Fundamental mode of transmission (both transmit via blood, sex, and vertical routes)",
+      "Global geographical distribution (HIV-1 is global; HIV-2 is mostly West Africa)",
+      "Progression timeline to clinical AIDS"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Both HIV-1 and HIV-2 share the exact same modes of transmission (sexual intercourse, blood/blood products, and mother-to-child). They differ in virulence, rate of transmission, and global distribution.",
+    source: "UI GES 107 Past Questions (Q134)"
+  },
+  {
+    id: 135,
+    question: "The following are clinical disorders associated with the testes EXCEPT/INCLUDING:",
+    options: ["Cryptorchidism", "Testicular torsion", "Germinal cell aplasia / orchitis", "All the above"],
+    correctAnswer: 3, // D
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Cryptorchidism (undescended testes), testicular torsion (twisting of the spermatic cord), and orchitis/germinal cell disorders are all pathological conditions of the testes.",
+    source: "UI GES 107 Past Questions (Q135)"
+  },
+  {
+    id: 136,
+    question: "The two recognized taxonomic types of the Human Immunodeficiency Virus are:",
+    options: ["HIV-1 and HIV-2", "HIV-A and HIV-B", "HIV-C and HIV-D", "HIV-Alpha and HIV-Beta"],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "The two genetically distinct species of Human Immunodeficiency Virus are HIV-1 (responsible for the worldwide pandemic) and HIV-2.",
+    source: "UI GES 107 Past Questions (Q136)"
+  },
+  {
+    id: 137,
+    question: "Gender equality means that:",
+    options: [
+      "Females have more rights and privileges than males",
+      "Disparity is reinforced between individuals based on biological sex",
+      "Both males and females enjoy equal rights, responsibilities, opportunities, and conditions to realize their full potential",
+      "Men and women must perform identical biological functions"
+    ],
+    correctAnswer: 2, // C
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "Gender equality entails equal rights, responsibilities, and access to resources for women and men, boys and girls, without discrimination.",
+    source: "UI GES 107 Past Questions (Q137)"
+  },
+  {
+    id: 138,
+    question: "Caffeine is classified pharmacologically as an example of:",
+    options: ["A central nervous system stimulant", "A sedative-hypnotic", "A volatile inhalant", "An opioid analgesic"],
+    correctAnswer: 0, // A
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Caffeine acts as an adenosine receptor antagonist in the brain, promoting alertness and combating drowsiness as a CNS stimulant.",
+    source: "UI GES 107 Past Questions (Q138)"
+  },
+  {
+    id: 139,
+    question: "The following are recognized menstrual disorders in women EXCEPT:",
+    options: [
+      "Menorrhagia (excessive bleeding) and Amenorrhea (absence of menstruation)",
+      "Metrorrhagia and Galactorrhoea (inappropriate milk secretion)",
+      "Dysmenorrhea (painful menstruation)",
+      "Polymenorrhea (abnormally frequent cycles)"
+    ],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Galactorrhoea refers to spontaneous milk flow from the breast unassociated with childbirth or nursing; it is a disorder of lactation (hyperprolactinemia), not a menstrual disorder.",
+    source: "UI GES 107 Past Questions (Q139)"
+  },
+  {
+    id: 140,
+    question: "Nutritional deficiency of calcium can result in the following clinical disorders EXCEPT:",
+    options: ["Rickets in growing children", "Beriberi", "Enlarged epiphyseal wrists and ankles", "Stunted skeletal growth and osteomalacia"],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Beriberi is caused by deficiency of Vitamin B1 (Thiamine), not calcium. Calcium and vitamin D deficiency cause rickets, osteomalacia, and skeletal deformities.",
+    source: "UI GES 107 Past Questions (Q140)"
+  },
+
+  // --- CHAPTER 1 / CODE 01 & DEMOGRAPHICS (NDHS & NIGERIAN HEALTH INDICES) ---
+  {
+    id: 141,
+    question: "According to the NDHS report of 2008, what was the estimated life expectancy at birth for Nigerians?",
+    options: ["53 years", "47 years", "57 years", "42 years"],
+    correctAnswer: 1, // B
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "According to the 2008 Nigeria Demographic and Health Survey (NDHS), the life expectancy at birth in Nigeria was reported at approximately 47 years.",
+    source: "GES 107 Textbook Practice (Code 01, Q1)"
+  },
+  {
+    id: 142,
+    question: "The average life expectancy at birth for Least Developed Countries (LDCs) benchmarked in the GES 107 text is:",
+    options: ["49 years", "53 years", "42 years", "57 years"],
+    correctAnswer: 1, // B
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "The global benchmark for Least Developed Countries (LDCs) averaged around 53 years, indicating that Nigeria's 47 years fell below the average LDC baseline.",
+    source: "GES 107 Textbook Practice (Code 01, Q2)"
+  },
+  {
+    id: 143,
+    question: "The maternal mortality ratio for Nigeria in the 2008 NDHS was estimated at ______ per 100,000 live births:",
+    options: ["457", "545", "601", "329"],
+    correctAnswer: 1, // B
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "The 2008 NDHS recorded a Maternal Mortality Ratio (MMR) of 545 maternal deaths per 100,000 live births.",
+    source: "GES 107 Textbook Practice (Code 01, Q3)"
+  },
+  {
+    id: 144,
+    question: "In Nigeria, approximately what percentages of urban and rural populations respectively have access to safe drinking water according to the course texts?",
+    options: ["58% and 64%", "72% and 49%", "67% and 53%", "76% and 51%"],
+    correctAnswer: 1, // B
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "Studies in the text show substantial urban-rural disparity in Nigeria, with roughly 72% of urban dwellers having safe water access compared to only 49% of rural dwellers.",
+    source: "GES 107 Textbook Practice (Code 01, Q4)"
+  },
+  {
+    id: 145,
+    question: "Which acute complication accounts for approximately one quarter (25%) of all maternal deaths in Nigeria?",
+    options: ["HIV/AIDS", "Malaria in pregnancy", "Obstetric haemorrhage", "Hypertension (Pre-eclampsia/Eclampsia)"],
+    correctAnswer: 2, // C
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "Postpartum and antepartum haemorrhage (excessive bleeding) accounts for about 25% of maternal fatalities, making it the single leading cause of maternal mortality.",
+    source: "GES 107 Textbook Practice (Code 01, Q9)"
+  },
+  {
+    id: 146,
+    question: "What does the abbreviation NDHS stand for?",
+    options: [
+      "National Development Health Statistics",
+      "Nigerian Demographic Health Survey",
+      "National Demographic and Health Survey",
+      "Nigerian Development Health Strategy"
+    ],
+    correctAnswer: 2, // C
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "NDHS stands for National Demographic and Health Survey, the nationally representative statistical survey conducted across Nigerian households.",
+    source: "GES 107 Textbook Practice (Code 01, Q15)"
+  },
+  {
+    id: 147,
+    question: "What does DALY stand for in public health and epidemiology?",
+    options: [
+      "Death adjustability and longevity yield",
+      "Disability-Adjusted Life Years",
+      "Death adjusted life years",
+      "Disease and Longevity Yield"
+    ],
+    correctAnswer: 1, // B
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Disability-Adjusted Life Year (DALY) is a standardized metric that measures the global burden of disease, calculated as the sum of years of life lost (YLL) and years lived with disability (YLD).",
+    source: "GES 107 Textbook Practice (Code 01, Q31)"
+  },
+  {
+    id: 148,
+    question: "Young people aged 10-24 years constitute approximately what percentage of the total population in Nigeria?",
+    options: ["Almost 30% (around 31-33%)", "10-15%", "50-60%", "75%"],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "According to demographic censuses cited in GES 107, young people aged 10-24 years account for approximately one-third (~30-33%) of Nigeria's total population.",
+    source: "GES 107 Textbook Practice (Code 01, Q35)"
+  },
+  {
+    id: 149,
+    question: "Studies referenced in GES 107 demonstrate that an individual who refrains from tobacco, maintains a nutritious diet, wears seat belts, and exercises regularly can expect to live up to approximately:",
+    options: ["65 years", "70 years", "75 years", "80 years"],
+    correctAnswer: 3, // D
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Epidemiological studies highlighted in GES 107 show that avoiding primary behavioral risk factors (tobacco, poor diet, physical inactivity, road injuries) extends healthy human life expectancy up to 80 years.",
+    source: "GES 107 Textbook Practice (Code 01, Q34)"
+  },
+  {
+    id: 150,
+    question: "According to World Health Organization (WHO), an adolescent is defined as any person between the ages of:",
+    options: ["10-19 years", "10-14 years", "15-24 years", "12-18 years"],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "WHO defines adolescents as individuals in the 10-19 years age group, and youth as 15-24 years. 'Young people' encompasses both (10-24 years).",
+    source: "GES 107 Textbook Practice (Code 00, Q37)"
+  },
+
+  // --- NUTRITION & BIOCHEMISTRY ESSENTIALS (CODE 00 & MOCK TESTS) ---
+  {
+    id: 151,
+    question: "Which of the following is NOT a genuine sugar / carbohydrate?",
+    options: ["Glucose", "Fructose", "Sweetose", "Galactose"],
+    correctAnswer: 2, // C
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Glucose, fructose, and galactose are physiological hexose monosaccharides; 'sweetose' is a fictitious term.",
+    source: "GES 107 Mock Practice (Code 00, Q3)"
+  },
+  {
+    id: 152,
+    question: "Which of the following carbohydrates is a disaccharide (complex double sugar)?",
+    options: ["Glucose", "Maltose", "Fructose", "Galactose"],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Maltose (glucose + glucose), lactose (glucose + galactose), and sucrose (glucose + fructose) are disaccharides. Glucose, fructose, and galactose are single-unit monosaccharides.",
+    source: "GES 107 Mock Practice (Code 00, Q4)"
+  },
+  {
+    id: 153,
+    question: "All of the following are essential micro (trace) minerals EXCEPT:",
+    options: ["Zinc", "Sodium", "Iodine", "Copper"],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Sodium, potassium, calcium, magnesium, and phosphorus are macro-minerals needed in large quantities (>100 mg/day). Zinc, iodine, and copper are micro/trace minerals needed in minute amounts.",
+    source: "GES 107 Mock Practice (Code 00, Q5)"
+  },
+  {
+    id: 154,
+    question: "Which of the following vitamins are BOTH water-soluble?",
+    options: ["Vitamins B and C", "Vitamins A and E", "Vitamins K and D", "Vitamins C and A"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Vitamins B-complex and C are water-soluble. Vitamins A, D, E, and K (ADEK) are fat-soluble.",
+    source: "GES 107 Mock Practice (Code 00, Q25)"
+  },
+  {
+    id: 155,
+    question: "What is the chemical name for Vitamin B12?",
+    options: ["Retinol", "Cyanocobalamin", "Ascorbic acid", "Riboflavin"],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Vitamin B12 is Cyanocobalamin; Retinol is Vitamin A; Ascorbic acid is Vitamin C; Riboflavin is Vitamin B2.",
+    source: "GES 107 Mock Practice (Code 00, Q26)"
+  },
+  {
+    id: 156,
+    question: "How much caloric energy is yielded by the complete oxidation of one gram of dietary fat?",
+    options: ["4 Kcal", "7 Kcal", "9 Kcal", "12 Kcal"],
+    correctAnswer: 2, // C
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Fat provides 9 Kcal per gram (37 kJ/g), whereas carbohydrates and proteins provide 4 Kcal per gram (17 kJ/g).",
+    source: "GES 107 Mock Practice (Code 00, Q21)"
+  },
+  {
+    id: 157,
+    question: "What is the ultimate end-product of complete protein digestion in the human gastrointestinal tract?",
+    options: ["Fatty acids", "Glucose", "Amino acids", "Glycerides"],
+    correctAnswer: 2, // C
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Proteins are long peptide polymers broken down by proteases into individual free amino acids, which are absorbed across the intestinal enterocytes.",
+    source: "GES 107 Mock Practice (Code 00, Q22)"
+  },
+  {
+    id: 158,
+    question: "The chemical deterioration of fats exposed to air, light, and heat resulting in unpleasant odor and off-flavor is called:",
+    options: ["Hydrogenation", "Rancidity of fat", "Esterification", "Saponification"],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Rancidity (lipid oxidation and hydrolysis) occurs when unsaturated fatty acid double bonds are cleaved by atmospheric oxygen, producing volatile aldehydes and ketones.",
+    source: "GES 107 CA Theory & MCQ"
+  },
+  {
+    id: 159,
+    question: "Which carbohydrate component cannot be digested or broken down by human gastrointestinal enzymes but aids bowel regularity?",
+    options: ["Starch", "Glycogen", "Dietary Fibre (Cellulose)", "Maltose"],
+    correctAnswer: 2, // C
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Humans lack the enzyme cellulase to hydrolyze beta-1,4-glycosidic bonds in dietary fiber; fiber adds bulk to stool, prevents constipation, and speeds transit time.",
+    source: "GES 107 Mock Practice (Code 00, Q19)"
+  },
+  {
+    id: 160,
+    question: "A deficiency of Vitamin A in children and adults causes impairment of dark adaptation known as:",
+    options: ["Scurvy", "Night blindness (Nyctalopia)", "Pellagra", "Rickets"],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Vitamin A (retinal) is a vital prosthetic group for rhodopsin in retinal rod cells; its deficiency leads to defective dim-light vision (night blindness) and xerophthalmia.",
+    source: "GES 107 Mock Practice (Code 00, Q6)"
+  },
+
+  // --- CHAIN OF INFECTION & PATHOGENS (CA & GOOGLE FORMS) ---
+  {
+    id: 161,
+    question: "How many basic links/elements constitute the epidemiologic 'Chain of Infection'?",
+    options: ["2 elements", "4 elements", "6 elements", "8 elements"],
+    correctAnswer: 2, // C
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "The six elements in the chain of infection are: 1) Infectious agent, 2) Reservoir, 3) Portal of exit, 4) Mode of transmission, 5) Portal of entry, and 6) Susceptible host.",
+    source: "GES 107 CA-01 (17 Oct 2015, Q3)"
+  },
+  {
+    id: 162,
+    question: "Which of the following is NOT an element in the epidemiological chain of infection?",
+    options: ["Reservoir", "Chain disruptor", "Susceptible host", "Portal of entry"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "'Chain disruptor' is an intervention concept (like handwashing or vaccines), not a biological link in the transmission chain itself.",
+    source: "GES 107 First Semester CA 2022 (Q15)"
+  },
+  {
+    id: 163,
+    question: "Inanimate contaminated objects (such as doorknobs, syringes, cups, and towels) that facilitate pathogen transmission are termed:",
+    options: ["Vectors", "Fomites", "Reservoirs", "Parasites"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Fomites are inanimate surfaces or items that become colonized with infectious agents and serve as a mechanical transfer vehicle between hosts.",
+    source: "GES 107 General CA 2023/2024"
+  },
+  {
+    id: 164,
+    question: "Infections acquired by patients during hospital admission that were neither present nor incubating upon arrival are called:",
+    options: ["Iatrogenic infections", "Nosocomial (hospital-acquired) infections", "Opportunistic infections", "Community-acquired infections"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Nosocomial infections (e.g. MRSA surgical site infections, catheter-associated UTIs) develop during hospital care due to cross-contamination or invasive procedures.",
+    source: "GES 107 CA Theory (Q15)"
+  },
+  {
+    id: 165,
+    question: "Transmission of an infection resulting directly from a medical intervention, physician action, or diagnostic procedure is called:",
+    options: ["Vertical transmission", "Catastrophic transmission", "Iatrogenic transmission", "Vectorial transmission"],
+    correctAnswer: 2, // C
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Iatrogenic transmission specifically refers to disease induction resulting from medical examinations, unsterile surgical tools, or contaminated injections administered by healthcare workers.",
+    source: "GES 107 First Semester CA 2022 (Q14)"
+  },
+  {
+    id: 166,
+    question: "Which protozoan parasite causes amoebic dysentery and severe diarrheal disease in Nigeria?",
+    options: ["Entamoeba histolytica", "Staphylococcus aureus", "Giardia lamblia", "Plasmodium falciparum"],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Entamoeba histolytica invades the colonic epithelium, causing amoebic dysentery characterized by blood and mucus in stool.",
+    source: "GES 107 Mock Practice (Code 00, Q30)"
+  },
+  {
+    id: 167,
+    question: "Which microorganism is the specific causative agent of Bacterial Vaginosis?",
+    options: ["Treponema pallidum", "Gardnerella vaginalis", "Neisseria gonorrhoeae", "Candida albicans"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Bacterial vaginosis is characterized by an overgrowth of anaerobic organisms, predominantly Gardnerella vaginalis, replacing normal protective Lactobacillus.",
+    source: "GES 107 First Semester CA 2022 (Q1)"
+  },
+  {
+    id: 168,
+    question: "Which retroviral enzyme synthesizes complementary double-stranded DNA from the single-stranded viral RNA template of HIV?",
+    options: ["Integrase", "DNA Helicase", "Reverse Transcriptase", "Protease"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Reverse transcriptase (RNA-dependent DNA polymerase) transcribes HIV's viral RNA genome into viral cDNA inside the host cytoplasm prior to integration.",
+    source: "GES 107 First Semester CA 2022 (Q5) & 2024"
+  },
+  {
+    id: 169,
+    question: "What is the full medical meaning of the acronym HAART?",
+    options: [
+      "High Anterior Antecedence of Reversible Transmission",
+      "Highly Active Anti-retroviral Therapy",
+      "Having Antiretroviral Active Reviral Treatment",
+      "Highly Activated Anti-retrovirus Treatment"
+    ],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "HAART stands for Highly Active Antiretroviral Therapy, the standard combination regimen of at least three antiretroviral drugs from different drug classes.",
+    source: "GES 107 First Semester CA 2022 (Q18)"
+  },
+  {
+    id: 170,
+    question: "The bacterium Treponema pallidum is the causative agent of which sexually transmitted infection?",
+    options: ["Gonorrhoea", "Chlamydia", "Syphilis", "Chancroid"],
+    correctAnswer: 2, // C
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Treponema pallidum is the spirochete bacterium responsible for primary, secondary, and tertiary syphilis.",
+    source: "GES 107 2024/2025 CA Batch 1"
+  },
+
+  // --- REPRODUCTIVE BIOLOGY & HORMONES ---
+  {
+    id: 171,
+    question: "The standard human menstrual cycle has an average duration of approximately:",
+    options: ["21 days", "28 days", "35 days", "14 days"],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "While normal cycles range between 21 and 35 days, the classical clinical textbook average menstrual cycle duration is 28 days.",
+    source: "GES 107 First Semester CA 2022 (Q39)"
+  },
+  {
+    id: 172,
+    question: "The anatomical structure that conveys the ovulated secondary oocyte from the ovary to the uterine cavity is the:",
+    options: ["Cervix", "Fallopian tube (Oviduct)", "Urethra", "Endometrium"],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "The Fallopian tubes (uterine tubes) catch the ovum discharged from the ovary via their fimbriae and provide the site where fertilization normally takes place.",
+    source: "GES 107 General CA 2023/2024"
+  },
+  {
+    id: 173,
+    question: "Newly produced spermatozoa undergo physiological maturation and are stored in which male reproductive organ?",
+    options: ["Testes", "Seminiferous tubules", "Epididymis", "Prostate gland"],
+    correctAnswer: 2, // C
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "After generation in the seminiferous tubules of the testes, immature sperm cells migrate into the epididymis where they gain motility and are stored.",
+    source: "GES 107 General CA 2023/2024 (Q7)"
+  },
+  {
+    id: 174,
+    question: "How many chromosomes are present in a normal human spermatid or mature spermatozoon?",
+    options: ["46 chromosomes", "23 chromosomes", "22 chromosomes", "24 chromosomes"],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Spermatozoa are haploid gametes produced by meiotic reduction division and contain 23 single chromosomes (22 autosomes + 1 sex chromosome, X or Y).",
+    source: "GES 107 Mock Practice (Code 00, Q34)"
+  },
+  {
+    id: 175,
+    question: "The monthly series of follicular growth, ovulation, and luteal transformation occurring in the female gonad is termed the:",
+    options: ["Menstrual cycle", "Ovarian cycle", "Uterine cycle", "Gestation cycle"],
+    correctAnswer: 1, // B
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "The ovarian cycle encompasses the follicular phase, ovulation, and luteal phase inside the ovary, whereas the uterine/menstrual cycle refers to changes in the endometrium.",
+    source: "GES 107 First Semester CA 2022 (Q16)"
+  },
+  {
+    id: 176,
+    question: "The primary hormone responsible for the development of female secondary sexual characteristics and endometrial proliferation is:",
+    options: ["Progesterone", "Luteinizing Hormone (LH)", "Oestrogen (Estrogen)", "Follicle-Stimulating Hormone (FSH)"],
+    correctAnswer: 2, // C
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Estrogen produced by developing ovarian follicles promotes female secondary sex characteristics (breasts, pelvic widening) and endometrial rebuilding.",
+    source: "GES 107 General CA 2023/2024 (Q12)"
+  },
+  {
+    id: 177,
+    question: "Spermatogenesis comprises two major developmental phases, namely:",
+    options: [
+      "Meiosis and Spermiogenesis (transformation of spermatids to spermatozoa)",
+      "Mitosis and Cleavage",
+      "Fertilization and Implantation",
+      "Erection and Ejaculation"
+    ],
+    correctAnswer: 0, // A
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Spermatogenesis includes: 1) Meiotic maturation divisions forming round haploid spermatids, and 2) Spermiogenesis, the cytological differentiation into flagellated spermatozoa.",
+    source: "GES 107 CA Theory (CA-01, Q17)"
+  },
+
+  // --- GENETICS & NON-COMMUNICABLE DISEASES ---
+  {
+    id: 178,
+    question: "If a couple with sickle cell trait (AS) marries a partner who has sickle cell disease (SS), what is the statistical probability of each child having sickle cell disease (SS)?",
+    options: ["25% Chance", "50% Chance", "75% Chance", "0% Chance"],
+    correctAnswer: 1, // B
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Punnett square for AS x SS: A allele combines with S (AS, 50%) and S allele combines with S (SS, 50%). Therefore, there is a 50% chance of a child with sickle cell disease (SS).",
+    source: "GES 107 2024/2025 CA Batch 1"
+  },
+  {
+    id: 179,
+    question: "All of the following are clinical manifestations of sickle cell disease EXCEPT:",
+    options: ["Protuberant abdomen", "Small stature and thin limbs", "Severe childhood obesity", "Frequent painful bone crises (dactylitis)"],
+    correctAnswer: 2, // C
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Children with sickle cell disease display growth faltering, delayed weight gain, and lean muscle mass due to chronic hypermetabolism and hypoxia; obesity is not a characteristic.",
+    source: "GES 107 First Semester CA 2022 (Q36)"
+  },
+  {
+    id: 180,
+    question: "A drug specifically administered to lower elevated core body temperature during a febrile illness is known as:",
+    options: ["Analgesic", "Antipyretic", "Anti-inflammatory", "Anti-emetic"],
+    correctAnswer: 1, // B
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Antipyretics (e.g., paracetamol/acetaminophen) act on the hypothalamic thermoregulatory center to reduce fever.",
+    source: "GES 107 Mock Practice (Code 00, Q50)"
+  },
+  {
+    id: 181,
+    question: "The conscious development of institutional objectives, policies, and budgets without recognizing or addressing gender disparities is termed:",
+    options: ["Gender mainstreaming", "Gender blindness", "Gender bias", "Gender equality"],
+    correctAnswer: 1, // B
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "Gender blindness is the failure to recognize that gender is an essential determinant of social outcomes, creating programs that treat men and women identically without acknowledging inequalities.",
+    source: "GES 107 First Semester CA 2022 (Q25)"
+  },
+  {
+    id: 182,
+    question: "A rigid, over-simplified, and generalized belief applied uniformly to all members of a gender group is called a:",
+    options: ["Gender bias", "Gender stereotype", "Gender clause", "Gender role"],
+    correctAnswer: 1, // B
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "A gender stereotype is an overgeneralized preconception about attributes or roles that ought to be possessed or performed by women and men.",
+    source: "GES 107 First Semester CA 2022 (Q26)"
+  },
+  {
+    id: 183,
+    question: "Which of the following is NOT a legitimate pharmacological class of therapeutic medications?",
+    options: ["Anti-emetics (prevent vomiting)", "Anti-infectives (combat microbes)", "Anti-coma", "Analgesics (relieve pain)"],
+    correctAnswer: 2, // C
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "'Anti-coma' is not a recognized pharmacological class; coma is managed through resuscitation, glucose, naloxone, or ICU supportive therapy.",
+    source: "GES 107 First Semester CA 2022 (Q32)"
+  },
+  {
+    id: 184,
+    question: "Which of the following constitutes an example of RATIONAL drug use?",
+    options: [
+      "Over-prescribing multiple redundant antibiotics",
+      "Self-medication without professional consultation",
+      "Taking medications in the appropriate dose, interval, and full duration",
+      "Underusing antibiotics and stopping as soon as fever subsides"
+    ],
+    correctAnswer: 2, // C
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Rational drug use requires patients to receive medications appropriate to their clinical needs, in doses that meet individual requirements, for an adequate period.",
+    source: "GES 107 First Semester CA 2022 (Q30)"
+  },
+  {
+    id: 185,
+    question: "Which opportunistic malignancy affecting vascular endothelial cells is classically associated with advanced HIV infection?",
+    options: ["Hepatocellular carcinoma", "Kaposi's sarcoma", "Ovarian cancer", "Glioblastoma multiforme"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Kaposi's sarcoma, caused by Human Herpesvirus 8 (HHV-8), causes bluish-purple cutaneous and visceral vascular lesions in immunosuppressed AIDS patients.",
+    source: "GES 107 First Semester CA 2022 (Q8)"
+  },
+  {
+    id: 186,
+    question: "Lassa fever is a hemorrhagic viral illness transmitted to humans through direct contact with food or household items contaminated with the urine or faeces of:",
+    options: ["Anopheles mosquitoes", "Multimammate rats (Mastomys natalensis)", "Fruit bats", "Tsetse flies"],
+    correctAnswer: 1, // B
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Lassa mammarenavirus is harbored by the natal multimammate mouse/rat (Mastomys natalensis); humans acquire it via contact with rodent excreta.",
+    source: "GES 107 2024/2025 CA Batch 1 (Q7)"
+  },
+  {
+    id: 187,
+    question: "Which sexually transmitted pathogen is a parasitic flagellated protozoon that causes greenish-yellow frothy discharge and vaginitis?",
+    options: ["Neisseria gonorrhoeae", "Trichomonas vaginalis", "Chlamydia trachomatis", "Candida albicans"],
+    correctAnswer: 1, // B
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Trichomoniasis is caused by the anaerobic flagellated protozoan parasite Trichomonas vaginalis.",
+    source: "GES 107 2024/2025 CA Batch 1 (Q8)"
+  },
+  {
+    id: 188,
+    question: "Who defined health as: 'A dynamic state of well-being characterized by a physical and mental potential, which satisfies the demands of life relative to age, culture, and personal responsibility'?",
+    options: ["WHO (World Health Organization)", "Dr. Johannes Bircher", "Saracchi", "Professor Ademola"],
+    correctAnswer: 1, // B
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Dr. Johannes Bircher (2005) proposed this famous modern dynamic definition of health emphasizing human potential satisfying life's demands relative to age and culture.",
+    source: "GES 107 Past Questions (Page 5, Q1)"
+  },
+  {
+    id: 189,
+    question: "The essential amino acids required in human adult nutrition:",
+    options: [
+      "Can all be synthesized de novo by human liver enzymes",
+      "Cannot be synthesized by the human body in sufficient quantities and must be supplied in food",
+      "Are non-essential and can be omitted from meals",
+      "Only exist in synthetic supplements"
+    ],
+    correctAnswer: 1, // B
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Essential amino acids (e.g. leucine, isoleucine, lysine, methionine, phenylalanine, threonine, tryptophan, valine, histidine) cannot be synthesized by human metabolic pathways and must come from diet.",
+    source: "GES 107 CA Theory (CA-01, Q11)"
+  },
+  {
+    id: 190,
+    question: "In what year was the first adult HIV national seroprevalence survey in Nigeria reporting a 4.1% - 4.2% national prevalence benchmark conducted?",
+    options: ["1991", "2001", "2010", "2020"],
+    correctAnswer: 2, // C
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "The 2010 National HIV Sero-prevalence Sentinel Survey in Nigeria established a benchmark national adult HIV prevalence of approximately 4.1% to 4.2%.",
+    source: "GES 107 Textbook Practice (Code 01, Q20)"
+  },
+
+  // --- COMPREHENSIVE PAST CA & EXAM QUESTIONS (CA-01, 2022-2025 CA FORMS & THEORY PAPERS) ---
+  {
+    id: 191,
+    question: "Late adolescence spans between what ages according to the GES 107 syllabus?",
+    options: ["10-14 years", "15-19 years", "20-24 years", "12-16 years"],
+    correctAnswer: 1, // B
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "In the course textbook, Early adolescence spans 10-14 years, while Late adolescence spans 15-19 years.",
+    source: "GES 107 2nd Semester CA-01 (17 Oct 2015, Section A Q1)"
+  },
+  {
+    id: 192,
+    question: "Health is described as 'dynamic' because:",
+    options: [
+      "It is a static, unchanging state once reached",
+      "It is an active, continuously fluctuating state of equilibrium that responds to physical, mental, and environmental demands",
+      "It only depends on medical consultations in hospitals",
+      "It never changes throughout an individual's lifetime"
+    ],
+    correctAnswer: 1, // B
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Health is not a fixed end-state; it is dynamic, active, and ever-changing as the body and mind continuously adapt to daily physical, psychological, and environmental pressures.",
+    source: "GES 107 CA-01 Section A Q2 / Marking Scheme"
+  },
+  {
+    id: 193,
+    question: "The nutritional status of an individual can be assessed through all the following clinical methods (the ABCD assessment) EXCEPT:",
+    options: [
+      "Anthropometric measurements (height, weight, body mass index, arm circumference)",
+      "Biochemical and laboratory evaluations (hemoglobin, serum albumin, urinalysis)",
+      "Clinical and physical examinations of hair, skin, eyes, and tongue",
+      "Astrological star signs and fortune telling"
+    ],
+    correctAnswer: 3, // D
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Nutritional assessment relies on the validated 'ABCD' methods: Anthropometric, Biochemical, Clinical, and Dietary assessment. Horoscopes and astrology have zero scientific role.",
+    source: "GES 107 2nd Semester CA-01 (Section A Q7)"
+  },
+  {
+    id: 194,
+    question: "An Adverse Drug Reaction (ADR) is medically defined as:",
+    options: [
+      "An expected, desirable therapeutic outcome after taking medication",
+      "Any noxious, unintended, and undesirable effect of a drug occurring at doses normally used for prophylaxis, diagnosis, or therapy",
+      "An intentional lethal overdose of medication",
+      "An allergic reaction occurring exclusively when expired drugs are ingested"
+    ],
+    correctAnswer: 1, // B
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "WHO defines an Adverse Drug Reaction as any response to a drug which is noxious and unintended, and which occurs at doses normally used in man for prophylaxis, diagnosis, or therapy.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q17)"
+  },
+  {
+    id: 195,
+    question: "Adults in Nigeria are particularly at risk of HIV infection because of incorrect and incomplete knowledge of HIV transmission and prevention.",
+    options: ["True", "False"],
+    correctAnswer: 0, // A - True
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "True. Misconceptions regarding HIV modes of transmission, low risk perception, and lack of comprehensive knowledge leave many adults vulnerable to risky sexual practices.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q18)"
+  },
+  {
+    id: 196,
+    question: "Prevention of HIV infection through education, abstinence, mutual fidelity, and barrier methods is the most effective way of combating the pandemic.",
+    options: ["True", "False"],
+    correctAnswer: 0, // A - True
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "True. Because there is currently no curative therapy or preventative vaccine, primary prevention remains the most effective global strategy to combat HIV/AIDS.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q19)"
+  },
+  {
+    id: 197,
+    question: "Male latex condoms are not 100% effective in preventing HIV transmission even when used correctly and consistently.",
+    options: ["True", "False"],
+    correctAnswer: 0, // A - True
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "True. While condoms reduce HIV transmission risk by roughly 85% to 98% when used correctly, they are not 100% foolproof due to potential microscopic defects, breakage, or slippage.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q20)"
+  },
+  {
+    id: 198,
+    question: "A preventative human HIV vaccine was officially produced and licensed in the year 2012.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "False. No licensed preventive HIV vaccine exists. In 2012, Truvada was approved for Pre-Exposure Prophylaxis (PrEP), but that is an antiretroviral drug, not a vaccine.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q21)"
+  },
+  {
+    id: 199,
+    question: "Antiretroviral therapy (ART) should be taken for two years and then stopped permanently once the patient feels healthy.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "False. ART is a lifelong treatment. Stopping antiretroviral drugs causes viral rebound from latent reservoirs and leads to rapid immune decline and drug resistance.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q22)"
+  },
+  {
+    id: 200,
+    question: "A youth subculture that displays systematic hostility, resistance, and opposition to the dominant culture of mainstream society is called a:",
+    options: [
+      "Counterculture (or Delinquent youth subculture)",
+      "Conformist subculture",
+      "Corporate dominant culture",
+      "Professional association"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "In sociology, a counterculture is a subculture whose values and norms of behavior differ substantially from and actively oppose those of mainstream society.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q23)"
+  },
+  {
+    id: 201,
+    question: "Hypertension is NOT a silent killer because patients always experience painful symptoms immediately.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "False. Hypertension is universally termed 'The Silent Killer' because it typically produces no noticeable symptoms for years while silently causing arterial damage, stroke, and heart failure.",
+    source: "GES 107 2nd Semester CA-01 (Section B Q25)"
+  },
+  {
+    id: 202,
+    question: "The essential clinical criteria that an individual with HIV must satisfy before initiating antiretroviral therapy (ART) include:",
+    options: [
+      "Confirmed HIV diagnosis, clinical/immunological evaluation (CD4 staging), and patient willingness and readiness to commit to lifelong adherence",
+      "Having high personal financial wealth and owning a car",
+      "Being admitted to an intensive care unit",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "ART initiation requires laboratory confirmation of HIV, assessment of clinical stage and baseline organ function, and patient readiness for strict lifelong adherence.",
+    source: "GES 107 CA-01 (Page 3 Q11 / Marking Scheme)"
+  },
+  {
+    id: 203,
+    question: "The three primary natural, synthetic, or industrial sources of pharmaceutical drugs are:",
+    options: [
+      "Natural sources (plants, animals, minerals, microorganisms), Synthetic chemical synthesis, and Semi-synthetic modification",
+      "Rivers, oceans, and rainfall",
+      "Motor parks, retail stores, and open markets",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Drugs originate from: 1) Natural sources (plants e.g. morphine, animals e.g. insulin, microorganisms e.g. penicillin), 2) Synthetic laboratory chemicals (e.g. paracetamol), and 3) Semi-synthetic modifications (e.g. ampicillin).",
+    source: "GES 107 CA-01 (Page 3 Q15 / Marking Scheme)"
+  },
+  {
+    id: 204,
+    question: "What is a drug according to pharmaceutical and medical definitions?",
+    options: [
+      "Any chemical substance used in or on the human body for prevention (prophylaxis), diagnosis, alleviation, treatment of disease, or modification of physiological functions",
+      "Only illegal recreational narcotics",
+      "Any food that provides caloric carbohydrates",
+      "Any liquid that quenches thirst"
+    ],
+    correctAnswer: 0, // A
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "A drug is defined pharmacologically as any substance or mixture of substances manufactured or sold for use in diagnosis, treatment, mitigation, or prevention of disease or abnormal physical states.",
+    source: "GES 107 CA-01 (Page 3 Q16)"
+  },
+  {
+    id: 205,
+    question: "Long-term excessive dietary intake of simple carbohydrates and sugars leads primarily to:",
+    options: [
+      "Overweight/obesity, dental caries, and increased risk of Type 2 Diabetes mellitus",
+      "Protein energy malnutrition (Kwashiorkor)",
+      "Severe dehydration and hypovolemia",
+      "Muscle atrophy and bone loss"
+    ],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Surplus carbohydrates are converted by insulin and lipogenesis into triglycerides and stored as adipose tissue, causing obesity, insulin resistance, and dental caries.",
+    source: "GES 107 1st Semester CA-01 (14 Aug 2014, Q3)"
+  },
+  {
+    id: 206,
+    question: "How can sickle cell disease (HbSS) be effectively prevented from occurring in future offspring?",
+    options: [
+      "Premarital genetic counseling and screening of intending couples to avoid AS x AS, AS x SS, or SS x SS unions",
+      "Vaccinating prospective parents before marriage",
+      "Taking high doses of folic acid during childhood",
+      "Drinking alkaline herbal solutions"
+    ],
+    correctAnswer: 0, // A
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Because sickle cell disease is an autosomal recessive inherited disorder, prospective premarital genotype screening and genetic counseling is the only primary preventive measure.",
+    source: "GES 107 1st Semester CA-01 (14 Aug 2014, Q6)"
+  },
+  {
+    id: 207,
+    question: "What is the mandatory first-aid step to take immediately following an accidental occupational needle-stick injury potentially exposed to HIV?",
+    options: [
+      "Wash the puncture site thoroughly under running water with soap, avoid squeezing, and report immediately to an HIV center for PEP evaluation",
+      "Tie a tight tourniquet around the arm and wait until morning",
+      "Apply raw kerosene and cover with cotton wool",
+      "Squeeze the finger vigorously until tissue bruises"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Immediate washing with soap and running water reduces viral inoculum. The exposed worker must report immediately to begin PEP within 2 hours (and no later than 72 hours).",
+    source: "GES 107 Marking Scheme (10 April 2013, Q1a)"
+  },
+  {
+    id: 208,
+    question: "What is the recommended emergency protocol following sexual assault (rape) regarding HIV prevention?",
+    options: [
+      "Report immediately to an emergency/HIV facility for forensic care, emergency contraception, baseline HIV testing, and initiation of a 28-day course of PEP within 72 hours",
+      "Take a hot shower and keep the incident a secret",
+      "Wait 3 months to see if symptoms appear before visiting a doctor",
+      "Take two aspirins and sleep"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Survivors of sexual assault require urgent comprehensive post-exposure management: trauma support, STI prophylaxis, emergency contraception, and immediate PEP initiation.",
+    source: "GES 107 Marking Scheme (10 April 2013, Q1b)"
+  },
+  {
+    id: 209,
+    question: "No two foods in nature are completely identical in their nutrient components and proportions.",
+    options: ["True", "False"],
+    correctAnswer: 0, // A - True
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "True. Each food commodity possesses a distinct profile of macro- and micronutrients, which is why a diversified balanced diet is essential to avoid specific nutrient deficiencies.",
+    source: "GES 107 CA-01 (Section B Q24)"
+  },
+  {
+    id: 210,
+    question: "Antibacterial antibiotics are very effective in curing fungal and viral infections.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "False. Antibacterial antibiotics target bacterial cell walls, ribosomes, or DNA gyrase, and have zero efficacy against fungi (which require antifungals) or viruses (which require antivirals).",
+    source: "GES 107 CA-01 (Section B Q25)"
+  },
+  {
+    id: 211,
+    question: "The human body takes in water and can store it in the soft tissues for several weeks without needing fresh daily water intake.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "False. The human body lacks a reservoir for storing excess water. Obligatory fluid loss through urine, sweat, respiration, and feces requires daily water replenishment.",
+    source: "GES 107 CA-01 (Section B Q26)"
+  },
+  {
+    id: 212,
+    question: "Oranges are primarily rich dietary sources of complex carbohydrates rather than Vitamin C.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "False. Oranges are citrus fruits prized primarily for their high ascorbic acid (Vitamin C), water, and soluble fiber content, not as a primary source of dietary carbohydrates.",
+    source: "GES 107 CA-01 (Section B Q27)"
+  },
+  {
+    id: 213,
+    question: "The liquid transport and nourishing medium for sperm in the male ejaculate is spermatozoa.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "False. Spermatozoa are the cellular gametes themselves. Semen (seminal plasma), secreted by the seminal vesicles, prostate, and bulbourethral glands, is the liquid transport medium.",
+    source: "GES 107 CA-01 (Section B Q28)"
+  },
+  {
+    id: 214,
+    question: "In public health and medical parasitology, a 'vector' is defined as:",
+    options: [
+      "An organism (typically a biting insect or arthropod) that transfers a pathogen from one infected host to another",
+      "An inanimate object like a soiled bedsheet or drinking cup",
+      "A surgical needle used in hospitals",
+      "A chemical pesticide used to kill weeds"
+    ],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "A biological vector (e.g. Anopheles mosquito, tsetse fly) transmits an infectious agent from one animal or human to another, often acting as a host where the parasite completes part of its life cycle.",
+    source: "GES 107 CA-01 (Page 6 Q14)"
+  },
+  {
+    id: 215,
+    question: "Puberty is scientifically defined as:",
+    options: [
+      "The biological stage of physical growth and maturation during which a human being becomes capable of sexual reproduction",
+      "The legal age of obtaining a driver's license",
+      "The stage when physical exercise becomes impossible",
+      "The cessation of ovarian follicular activity"
+    ],
+    correctAnswer: 0, // A
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "Puberty is the period in life marked by the development of secondary sexual characteristics and the acquisition of reproductive capacity.",
+    source: "GES 107 CA-01 (Page 6 Q18)"
+  },
+  {
+    id: 216,
+    question: "Which lipid-soluble vitamin serves as a premier biological antioxidant that protects polyunsaturated fatty acids in cell membranes from free radical oxidation?",
+    options: ["Vitamin E (Tocopherol)", "Vitamin D", "Vitamin K", "Vitamin B6"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Vitamin E acts as a chain-breaking antioxidant in lipid membranes, neutralizing free radicals and preventing lipid peroxidation.",
+    source: "GES 107 CA-01 (Page 6 Q23)"
+  },
+  {
+    id: 217,
+    question: "Marasmus is a severe form of protein-energy malnutrition occurring in infants and young children characterized by:",
+    options: [
+      "Severe deficiency of BOTH calories/energy and protein, leading to severe emaciation, sunken eyes, and 'skin and bones' appearance",
+      "Adequate calorie intake with isolated protein deficiency causing protruding potbelly",
+      "Severe obesity and high body fat accumulation",
+      "Excessive retention of fluids in the soft tissues"
+    ],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Marasmus is characterized by generalized starvation with severe wasting of muscle and subcutaneous fat. Kwashiorkor is protein deficiency with preserved edema/ascites.",
+    source: "GES 107 CA-01 (Page 22 Q2)"
+  },
+  {
+    id: 218,
+    question: "The primary endocrine function of the hormone Insulin produced by pancreatic beta cells is to:",
+    options: [
+      "Facilitate cellular uptake and utilization of glucose, stimulate glycogen synthesis in liver and muscle, and lower blood glucose levels",
+      "Break down glycogen into glucose during fasting to raise blood sugar",
+      "Stimulate the production of breast milk after delivery",
+      "Trigger the release of the ovum from the Graafian follicle"
+    ],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Insulin promotes the storage of glucose as glycogen and fat, decreases gluconeogenesis, and maintains euglycemia.",
+    source: "GES 107 CA-01 (Page 22 Q5)"
+  },
+  {
+    id: 219,
+    question: "Two pathogenic bacterial species notorious for producing potent toxins that damage human host tissues are:",
+    options: [
+      "Clostridium tetani (tetanospasmin) and Staphylococcus aureus (enterotoxin/TSST-1)",
+      "Lactobacillus bulgaricus and Streptococcus thermophilus",
+      "Candida albicans and Trichophyton rubrum",
+      "Plasmodium falciparum and Entamoeba histolytica"
+    ],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Clostridium tetani produces the potent neurotoxin tetanospasmin, causing tetanus; Staphylococcus aureus secretes enterotoxins causing severe food poisoning and toxic shock.",
+    source: "GES 107 CA-01 (Page 22 Q7)"
+  },
+  {
+    id: 220,
+    question: "An adult human being typically requires approximately how many hours of restful sleep every 24 hours to maintain physical and psychological health?",
+    options: ["8 hours", "2 hours", "14 hours", "4 hours"],
+    correctAnswer: 0, // A
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Physiological sleep requirements for young adults range between 7 to 8 hours daily for neurocognitive restoration, immune surveillance, and hormonal homeostasis.",
+    source: "GES 107 CA-01 (Page 27 Q15 / Marking Scheme)"
+  },
+  {
+    id: 221,
+    question: "A 'young person' according to standard World Health Organization (WHO) and United Nations demography is defined as an individual between the ages of:",
+    options: ["10-24 years", "10-34 years", "0-18 years", "25-45 years"],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "WHO defines: Adolescents = 10-19 years; Youth = 15-24 years; Young People = 10-24 years.",
+    source: "GES 107 CA-01 (Page 27 Q16)"
+  },
+  {
+    id: 222,
+    question: "Which tertiary and state hospitals are listed in the course materials as key comprehensive HIV/AIDS treatment and care centres in Oyo State, Nigeria?",
+    options: [
+      "University College Hospital (UCH) Ibadan, Adeoyo Maternity Hospital, St. Mary Catholic Hospital, and Oluyoro Catholic Hospital",
+      "Only patent medicine vendors in street kiosks",
+      "Traditional bone-setting centres",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "The official course marking guide specifies UCH Ibadan, Adeoyo Maternity Hospital, St. Mary Catholic Hospital, and Oluyoro Catholic Hospital as principal ART delivery centres.",
+    source: "GES 107 Marking Scheme for CA-02 (1 March 2014, Q1)"
+  },
+  {
+    id: 223,
+    question: "The following are recognized systemic routes of drug administration EXCEPT:",
+    options: [
+      "Oral (by mouth)",
+      "Intravenous (IV injection into a vein)",
+      "Intramuscular (IM injection into muscle)",
+      "Sublingual / buccal (under the tongue or cheek)",
+      "External application of paint on clothes"
+    ],
+    correctAnswer: 4, // E
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Systemic drug administration delivers drug to the bloodstream via oral, sublingual, rectal, parenteral (IV, IM, SC), and inhalational routes.",
+    source: "GES 107 Marking Scheme (Page 18 Q11)"
+  },
+  {
+    id: 224,
+    question: "Unexplained progressive weight loss, palpable painless swellings or lumps in body tissues, and persistent chronic cough are recognized warning features of:",
+    options: [
+      "Non-communicable diseases (such as various cancers or chronic metabolic diseases)",
+      "Acute common cold",
+      "Normal athletic conditioning",
+      "Healthy growth spurt"
+    ],
+    correctAnswer: 0, // A
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Constitutional 'red-flag' symptoms like unintentional weight loss, persistent lumps, and chronic bleeding warrant urgent medical evaluation for malignancy or chronic disease.",
+    source: "GES 107 Marking Scheme (Page 18 Q12d)"
+  },
+  {
+    id: 225,
+    question: "Routine long-term clinical management of sickle cell disease (HbSS) to minimize painful crises includes all the following EXCEPT:",
+    options: [
+      "Adequate daily oral fluid hydration to prevent erythrocyte hemoconcentration",
+      "Daily maintenance supplementation with folic acid",
+      "Avoiding exposure to extreme cold, dehydration, and high-altitude hypoxia",
+      "Severe deliberate dehydration and rigorous unhydrated exercise in hot sun"
+    ],
+    correctAnswer: 3, // D
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "Dehydration, cold exposure, and acidosis induce hemoglobin S polymerization and red cell sickling; high hydration and daily folic acid are life-saving preventive measures.",
+    source: "GES 107 Marking Scheme (Page 19 Q9)"
+  },
+  {
+    id: 226,
+    question: "The two principal therapeutic reasons why pharmaceutical drugs are administered in clinical medicine are:",
+    options: [
+      "To cure disease, control symptoms, arrest progression, or prevent disease (prophylaxis)",
+      "To induce recreational euphoria and addiction",
+      "To satisfy taste buds and replace nutritional meals",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Therapeutic drug usage focuses on curing infections, controlling clinical symptoms (e.g. analgesics), preventing disease (prophylaxis e.g. antimalarials, vaccines), and arresting chronic disease progression.",
+    source: "GES 107 Marking Scheme (Page 19 Q10)"
+  },
+  {
+    id: 227,
+    question: "What is the United Nations (UN) operational demographic definition of a 'Youth'?",
+    options: [
+      "A person between 15 and 24 years of age",
+      "A person between 10 and 14 years of age",
+      "Any individual under the age of 45",
+      "A child under 10 years of age"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "The United Nations officially defines youth as persons between the ages of 15 and 24 years.",
+    source: "GES 107 Marking Scheme (Page 17 Q4)"
+  },
+  {
+    id: 228,
+    question: "The three major environmental, physiological, and social challenges faced by youth entering university include:",
+    options: [
+      "Developmental pubertal changes, environmental adaptation (accommodation/peer group), and cultural transition",
+      "Inheriting too much money and lack of school subjects",
+      "Excessive sleep and lack of food options",
+      "None of the above"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "University matriculation forces youth to navigate physiological maturity, peer pressures, academic lecturing transitions, and hostel accommodation challenges.",
+    source: "GES 107 Marking Scheme (Page 13 Q4 / Page 17 Q5)"
+  },
+  {
+    id: 229,
+    question: "According to the World Health Organization (WHO), Life Skills are defined as:",
+    options: [
+      "Abilities for adaptive and positive behavior that enable individuals to deal effectively with the demands and challenges of everyday life",
+      "Physical bodybuilding and athletic weightlifting skills",
+      "Mechanical automotive repair and plumbing techniques",
+      "Rote memorization of lecture notes without understanding"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "WHO defines life skills as the psychosocial abilities for adaptive and positive behavior enabling individuals to deal effectively with everyday challenges.",
+    source: "GES 107 Marking Scheme (Page 12 Q5)"
+  },
+  {
+    id: 230,
+    question: "Which of the following is NOT one of the recognized WHO core psychosocial life skills?",
+    options: [
+      "Critical thinking and creative problem-solving",
+      "Interpersonal communication, empathy, and assertiveness",
+      "Coping with emotions and stress management",
+      "Aggressive fist-fighting and street combat"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "WHO core life skills fall into cognitive skills, interpersonal skills, and emotional coping skills; violent aggression is an antithesis of life skills.",
+    source: "GES 107 Marking Scheme (Page 12 Q6)"
+  },
+  {
+    id: 231,
+    question: "Drug addiction is medically characterized by all of the following EXCEPT:",
+    options: [
+      "An overwhelming compulsion to continue taking the substance and obtain it by any means",
+      "A tendency to escalate the dose over time (tolerance)",
+      "Psychological and physiological dependence on the drug's effects",
+      "Easy and effortless ability to stop using the drug at any time without withdrawal"
+    ],
+    correctAnswer: 3, // D
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Addiction is defined by loss of control, compulsive consumption despite harm, tolerance, and painful withdrawal symptoms upon cessation.",
+    source: "GES 107 Marking Scheme (Page 12 Q10)"
+  },
+  {
+    id: 232,
+    question: "Studies cited in the GES 107 textbook show that approximately what percentage of pregnancies occurring among unmarried adolescents in Nigeria are unplanned?",
+    options: ["About 60%", "About 10%", "Less than 2%", "Over 95%"],
+    correctAnswer: 0, // A
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "Roughly 60% of pregnancies among unmarried young women in Nigeria are unintended, driving high rates of unsafe illegal abortions and maternal morbidity.",
+    source: "GES 107 Code 01 (Q42)"
+  },
+  {
+    id: 233,
+    question: "What is the mean age of newly admitted first-year undergraduate students at the University of Ibadan according to campus epidemiological data?",
+    options: ["18 years", "23 years", "15 years", "27 years"],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "The mean age of UI first-year undergraduate students is approximately 18 years, placing them at the transition between late adolescence and young adulthood.",
+    source: "GES 107 Code 01 (Q43)"
+  },
+  {
+    id: 234,
+    question: "Which global framework established targets to combat HIV/AIDS, malaria, and reduce maternal and under-five mortality by the benchmark year 2015?",
+    options: [
+      "The Millennium Development Goals (MDGs)",
+      "The Kyoto Protocol",
+      "The Geneva Treaty",
+      "The Bretton Woods Agreement"
+    ],
+    correctAnswer: 0, // A
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "MDGs 4, 5, and 6 explicitly targeted child mortality reduction, maternal health improvement, and halting HIV/AIDS and malaria by 2015.",
+    source: "GES 107 Code 01 (Q23)"
+  },
+  {
+    id: 235,
+    question: "According to global tuberculosis epidemiological rankings cited in GES 107, Nigeria ranks:",
+    options: [
+      "Fourth highest tuberculosis burden in the world",
+      "Lowest in the world with no cases",
+      "Fiftieth in the world",
+      "Second in Europe"
+    ],
+    correctAnswer: 0, // A
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "Nigeria bears one of the highest TB disease burdens globally, ranking 4th in the world and 1st in Africa.",
+    source: "GES 107 Code 01 (Q22)"
+  },
+  {
+    id: 236,
+    question: "The World Bank stressed in its health sector report that what intervention is of the most critical, dire need for the people of Nigeria?",
+    options: [
+      "Behavioural change education and preventative communication",
+      "Building 100,000 hospital wards",
+      "Importation of canned soft drinks",
+      "Eliminating all exercise programs"
+    ],
+    correctAnswer: 0, // A
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Behavioral change communication and education addresses root causes of communicable and lifestyle diseases far more cost-effectively than hospital construction alone.",
+    source: "GES 107 Code 01 (Q32)"
+  },
+  {
+    id: 237,
+    question: "In which two developing countries did sustained social investment and universal primary health systems dramatically elevate health status indicators cited in the course text?",
+    options: ["Costa Rica and Cuba", "Senegal and Kenya", "Chad and Niger", "India and Pakistan"],
+    correctAnswer: 0, // A
+    topicId: "demographics-stats",
+    topicName: "Nigerian Health Demographics & NDHS Data",
+    explanation: "Costa Rica and Cuba are celebrated international case studies where prioritized primary healthcare and female literacy achieved health outcomes comparable to developed nations.",
+    source: "GES 107 Code 01 (Q47)"
+  },
+  {
+    id: 238,
+    question: "Chemical digestion of dietary starches begins in the oral cavity through the action of which enzyme secreted in saliva?",
+    options: ["Salivary amylase (Ptyalin)", "Pepsin", "Gastric lipase", "Trypsin"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Salivary amylase (ptyalin) initiates the enzymatic breakdown of starch polysaccharides into shorter dextrins and maltose in the mouth.",
+    source: "GES 107 PQ (Page 14 Q34)"
+  },
+  {
+    id: 239,
+    question: "Naturally occurring dietary carbohydrates and sugars can be ranked in descending order of sweetness as:",
+    options: [
+      "Fructose > Sucrose > Glucose > Maltose > Galactose > Lactose",
+      "Lactose > Starch > Glucose > Fructose",
+      "Glucose > Fructose > Sucrose > Lactose",
+      "Starch > Glycogen > Maltose > Sucrose"
+    ],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Fructose is the sweetest naturally occurring sugar, followed by sucrose (table sugar), glucose, maltose, and lastly lactose (milk sugar).",
+    source: "GES 107 PQ (Page 10 Q21)"
+  },
+  {
+    id: 240,
+    question: "Hydrogenation of edible vegetable oils is a chemical process that:",
+    options: [
+      "Adds hydrogen atoms across unsaturated double bonds to produce solid or semi-solid fats (like margarine)",
+      "Removes all fat-soluble vitamins from oils",
+      "Converts carbohydrates into protein",
+      "Causes instant bacterial decay"
+    ],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Hydrogenation converts liquid polyunsaturated vegetable oils into solid fats by saturating the carbon-carbon double bonds with hydrogen.",
+    source: "GES 107 PQ (Page 11 Q23)"
+  },
+  {
+    id: 241,
+    question: "Over what proportion of all dietary lipids consumed in food are in the chemical form of Triglycerides?",
+    options: ["Over 90% to 95%", "About 25%", "Less than 10%", "Exactly 50%"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Approximately 90% to 95% of fats in foods (and in human fat depots) exist as triglycerides, consisting of glycerol esterified with three fatty acid chains.",
+    source: "GES 107 PQ (Page 11 Q25)"
+  },
+  {
+    id: 242,
+    question: "Saturated fatty acids in the human diet are found mostly in:",
+    options: ["Animal products (butter, cheese, red meat, lard)", "Plant seed oils", "Fresh fruits", "Vegetable broths"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Saturated fats (solid at room temperature) predominate in animal tissues and dairy products, whereas vegetable and marine oils are rich in unsaturated fatty acids.",
+    source: "GES 107 PQ (Page 12 Q26)"
+  },
+  {
+    id: 243,
+    question: "Unsaturated fatty acids (with one or more double bonds) are found predominantly in:",
+    options: ["Plant seeds and vegetable oils", "Animal fat and lard", "Beef tallow", "Processed butter only"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Unsaturated fatty acids are abundant in plant seeds (soybean, sunflower, canola, olive) and oily fish.",
+    source: "GES 107 PQ (Page 12 Q27)"
+  },
+  {
+    id: 244,
+    question: "The primary excretory organ responsible for filtering metabolic waste products from blood to produce urine is the:",
+    options: ["Kidney", "Liver", "Spleen", "Pancreas"],
+    correctAnswer: 0, // A
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "The kidneys filter blood plasma, remove metabolic nitrogenous wastes (urea, creatinine), and regulate fluid, electrolyte, and acid-base balance.",
+    source: "GES 107 PQ (Page 13 Q31)"
+  },
+  {
+    id: 245,
+    question: "The biological process whereby digested nutrients are transferred from the intestinal lumen across epithelial cells into blood and lymph circulation is called:",
+    options: ["Absorption", "Mastication", "Ingestion", "Elimination"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Absorption is the movement of digested food molecules across the intestinal mucosa into the bloodstream or lymphatic lacteals.",
+    source: "GES 107 PQ (Page 13 Q33)"
+  },
+  {
+    id: 246,
+    question: "Which of the following is NOT a physiological function of bones in the human body?",
+    options: [
+      "Providing a structural framework and levers for muscle attachment",
+      "Mechanical protection of internal organs (brain in skull, heart in ribcage)",
+      "Hematopoiesis (production of red and white blood cells in marrow)",
+      "Direct secretion of digestive hydrochloric acid into the stomach"
+    ],
+    correctAnswer: 3, // D
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "Bones provide structural support, protection, mineral storage, and blood cell formation. Gastric parietal cells in the stomach secrete hydrochloric acid, not bones.",
+    source: "GES 107 PQ (Page 14 Q38)"
+  },
+  {
+    id: 247,
+    question: "Microorganisms that normally live on or inside human tissues without causing pathology and can provide beneficial barrier and metabolic functions are called:",
+    options: ["Non-pathogens (Commensal microbiota)", "Virulent pathogens", "Tapeworms", "Strict parasites"],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Non-pathogens (such as gut flora) synthesize vitamins, aid digestion, and prevent colonization by harmful pathogenic microbes.",
+    source: "GES 107 PQ (Page 15 Q41)"
+  },
+  {
+    id: 248,
+    question: "Which specialized plant vascular tissue is responsible for translocating organic photosynthetic nutrients (sugars) throughout the plant?",
+    options: ["Phloem", "Xylem", "Cortex", "Stomata"],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Phloem transports photosynthetic assimilates (sucrose) bidirectionally, whereas xylem transports water and inorganic minerals upwards from roots.",
+    source: "GES 107 PQ (Page 15 Q40)"
+  },
+  {
+    id: 249,
+    question: "Which essential nutrient is most easily destroyed by high heat, prolonged boiling, and exposure to air during domestic food preparation?",
+    options: ["Vitamin C (and Vitamin A)", "Iron mineral", "Calcium", "Table Salt (Sodium chloride)"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Vitamin C (ascorbic acid) is water-soluble and heat-labile; it readily degrades when exposed to heat, air, and cooking water.",
+    source: "GES 107 2nd Semester General CA (Page 1 Q1)"
+  },
+  {
+    id: 250,
+    question: "The sequence of biological and pathological events from host exposure to an infectious microbe to the manifestation of disease is called:",
+    options: ["Pathogenesis", "Infectivity", "Bacterial colonization", "Immune surveillance"],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Pathogenesis is the biological mechanism and progression by which an etiology or pathogen causes morbid changes in the host.",
+    source: "GES 107 2nd Semester General CA (Page 2 Q4)"
+  },
+  {
+    id: 251,
+    question: "A teacher observes that a young student is squinting and struggling to read letters written on the classroom blackboard. Increasing which vitamin in her diet is clinically indicated?",
+    options: ["Vitamin A", "Vitamin K", "Vitamin D", "Vitamin B12"],
+    correctAnswer: 0, // A
+    topicId: "nutrition",
+    topicName: "Nutrition, Nutrients & Dietetics",
+    explanation: "Vitamin A deficiency causes ocular surface keratinization (Bitot's spots) and impairs visual phototransduction, causing visual difficulty.",
+    source: "GES 107 2nd Semester General CA (Page 3 Q8)"
+  },
+  {
+    id: 252,
+    question: "Merely being without bodily pain, disease symptoms, or physical infirmity is a complete and sufficient guarantee that an individual is in total health.",
+    options: ["True", "False"],
+    correctAnswer: 1, // B - False
+    topicId: "health-living",
+    topicName: "Concept of Health & Healthy Living",
+    explanation: "False. The WHO definition explicitly emphasizes that health is a complete state of physical, mental, and social well-being, not merely the absence of disease or infirmity.",
+    source: "GES 107 2nd Semester General CA (Page 4 Q9)"
+  },
+  {
+    id: 253,
+    question: "All the following socio-cultural and behavioral factors explain why HIV affects young people disproportionately EXCEPT:",
+    options: [
+      "Gender inequalities and economic dependence",
+      "Lack of comprehensive reproductive health and STI information",
+      "Adolescent feelings of invulnerability and denial that AIDS exists",
+      "Inability of young people to have any biological capacity for self-control"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Young people possess capacity for self-regulation; structural vulnerability stems from lack of information, power imbalances, and risk-taking psychology, not an inherent inability to control oneself.",
+    source: "GES 107 2nd Semester General CA (Page 4 Q11)"
+  },
+  {
+    id: 254,
+    question: "All the following are developmental characteristics of adolescence EXCEPT:",
+    options: [
+      "Rapid pubertal physical growth spurt and hormonal changes",
+      "Developing deeper and more intense relationships with peer groups",
+      "Forming personal identity and making major life decisions",
+      "Total economic self-sustenance and complete financial independence from family"
+    ],
+    correctAnswer: 3, // D
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Adolescents are still undergoing developmental socialization and typically depend on parents/guardians for economic sustenance and shelter.",
+    source: "GES 107 2nd Semester General CA (Page 6 Q15)"
+  },
+  {
+    id: 255,
+    question: "Which of the following occupational groups is NOT typically classified in epidemiological surveillance as having an elevated mobility risk for contracting STIs?",
+    options: [
+      "Long-distance interstate truck drivers",
+      "Members of the armed forces on prolonged mobile deployments",
+      "Itinerant commercial salesmen with high geographic mobility",
+      "Primary school classroom teachers"
+    ],
+    correctAnswer: 3, // D
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Occupational cohorts with high geographic mobility and prolonged separation from families (truck drivers, mobile soldiers, traveling salesmen) have elevated behavioral risk for STIs.",
+    source: "GES 107 2024/2025 CA Batch 1 (Page 3)"
+  },
+  {
+    id: 256,
+    question: "Which molecular diagnostic assay is used specifically to establish HIV infection in exposed infants under 18 months of age?",
+    options: [
+      "HIV DNA / RNA Polymerase Chain Reaction (PCR)",
+      "Standard rapid antibody screening strip",
+      "ELISA antibody test",
+      "Urinalysis"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Because maternal anti-HIV IgG antibodies passively cross the placenta, antibody tests remain false-positive for up to 18 months; viral PCR detects the viral nucleic acid directly.",
+    source: "GES 107 2024/2025 CA Batch 1 (Page 2)"
+  },
+  {
+    id: 257,
+    question: "Which core psychosocial life skill enables individuals to resolve interpersonal conflicts, de-escalate tension, and reach constructive compromises amicably?",
+    options: [
+      "Negotiation and conflict resolution skill",
+      "Physical combat ability",
+      "Dressing and grooming skill",
+      "Isolation and avoidance"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Negotiation is a core life skill that combines active listening, assertiveness, and compromise to settle differences constructively.",
+    source: "GES 107 General CA 2023/2024 (Page 8)"
+  },
+  {
+    id: 258,
+    question: "Which ethical principle in medical law ensures that diagnostic information on an individual's HIV status is disclosed only to healthcare providers directly involved in their care?",
+    options: [
+      "Medical Confidentiality",
+      "Public broadcast and announcement",
+      "Mandatory workplace reporting",
+      "Open access"
+    ],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Confidentiality ensures that medical test records and diagnostic results are safeguarded from unauthorized disclosure to protect patient dignity.",
+    source: "GES 107 2024/2025 CA Batch 1 (Page 8)"
+  },
+  {
+    id: 259,
+    question: "Which of the following acute infectious diseases are transmitted via the faecal-oral route through contaminated food or drinking water?",
+    options: [
+      "Typhoid fever, Hepatitis A, and Poliomyelitis",
+      "Malaria, Yellow fever, and Dengue",
+      "HIV, Syphilis, and Gonorrhea",
+      "Measles, Influenza, and Chickenpox"
+    ],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Typhoid (Salmonella Typhi), Hepatitis A virus, and Poliovirus are ingested through contaminated water, ice, or uncooked food via the faecal-oral cycle.",
+    source: "GES 107 General CA 2023/2024 (Page 4)"
+  },
+  {
+    id: 260,
+    question: "Which of the following is an established negative clinical consequence of very early sexual debut among adolescent girls?",
+    options: [
+      "Increased biological vulnerability to cervical epithelial tear and STIs (including HPV and HIV)",
+      "Improved emotional maturity and resilience",
+      "Higher graduation rates with first-class honors",
+      "Decreased lifetime risk of unplanned pregnancy"
+    ],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "In adolescent girls, the cervix has an immature transformation zone (ectopy) with fragile columnar epithelium, greatly elevating susceptibility to STIs, HIV, and HPV.",
+    source: "GES 107 2024/2025 CA Batch 1 (Page 1)"
+  },
+  {
+    id: 261,
+    question: "Which anatomical passage in the male reproductive system transports both urine from the bladder and semen from ejaculatory ducts out of the body?",
+    options: ["The Urethra", "The Ureter", "The Vas deferens", "The Epididymis"],
+    correctAnswer: 0, // A
+    topicId: "reproduction",
+    topicName: "Human Reproductive Anatomy & Physiology",
+    explanation: "In males, the urethra serves as a common urogenital canal for the voiding of urine and the expulsion of seminal fluid during ejaculation.",
+    source: "GES 107 General CA 2023/2024 (Page 2)"
+  },
+  {
+    id: 262,
+    question: "All of the following are examples of IRRATIONAL drug use EXCEPT:",
+    options: [
+      "Over-prescribing multiple redundant medications for minor ailments",
+      "Self-medication without professional clinical diagnosis",
+      "Underuse or premature termination of antibiotic therapy",
+      "Taking medications in the medically appropriate dose, dosage interval, and full prescribed course"
+    ],
+    correctAnswer: 3, // D
+    topicId: "drugs-substances",
+    topicName: "Drugs, Pharmacology & Substance Abuse",
+    explanation: "Rational drug use requires that patients receive medications appropriate to their clinical needs, in doses that meet their individual requirements, for an adequate period of time.",
+    source: "GES 107 First Semester CA 2022 (Page 10 Q30)"
+  },
+  {
+    id: 263,
+    question: "Regarding personal responsibility and institutional policy on sexual harassment, all the following are mandatory roles EXCEPT:",
+    options: [
+      "Never be a perpetrator of sexual harassment",
+      "Having a 'tolerable limit' or accepting mild sexual harassment as unavoidable",
+      "Reporting any verified sexual harassment incident whether or not one is the direct victim",
+      "Making proactive suggestions to eliminate sexual harassment on campus and in workplaces"
+    ],
+    correctAnswer: 1, // B
+    topicId: "gender-society",
+    topicName: "Gender Equality, Violence & Society",
+    explanation: "Zero-tolerance is the governing standard; having a 'tolerable limit' condones and normalizes predatory behavior.",
+    source: "GES 107 First Semester CA 2022 (Page 13 Q28)"
+  },
+  {
+    id: 264,
+    question: "Which of the following hemoglobin variants is NOT an allelic genotype of sickle cell disease?",
+    options: ["HbCD", "HbSS", "HbSC", "HbSD"],
+    correctAnswer: 0, // A
+    topicId: "ncds-genetics",
+    topicName: "Non-Communicable Diseases & Genetics",
+    explanation: "HbCD is a combination of hemoglobin C and D traits and does NOT contain hemoglobin S (the sickling gene); hence it does not cause sickle cell disease.",
+    source: "GES 107 First Semester CA 2022 (Page 13 Q37)"
+  },
+  {
+    id: 265,
+    question: "During HIV replication inside host cells, which antiretroviral drug class acts to stop the viral enzyme from integrating viral cDNA into the host human chromosome?",
+    options: ["Integrase strand transfer inhibitors (INSTIs)", "Protease inhibitors", "Fusion inhibitors", "Reverse transcriptase inhibitors"],
+    correctAnswer: 0, // A
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "Integrase inhibitors (such as dolutegravir) target the viral integrase enzyme, blocking the insertion of viral cDNA into the host genome.",
+    source: "GES 107 First Semester CA 2022 (Page 5 Q5)"
+  },
+  {
+    id: 266,
+    question: "In pregnant women living with HIV, does the virus freely and readily cross the intact placenta throughout all stages of gestation?",
+    options: [
+      "False - the intact placental syncytiotrophoblast barrier protects the fetus, and transmission occurs mainly during labor/delivery or breastfeeding",
+      "True - HIV crosses immediately into the embryo at conception with 100% certainty"
+    ],
+    correctAnswer: 0, // A - False
+    topicId: "stis-hiv",
+    topicName: "STIs, HIV/AIDS Prevention & Care",
+    explanation: "False. The intact placenta is an effective biological barrier; in-utero transmission occurs in only a minority of cases, with the majority occurring during intrapartum labor/delivery.",
+    source: "GES 107 First Semester CA 2022 (Page 9 Q13)"
+  },
+  {
+    id: 267,
+    question: "Which sociological theoretical perspective views youth subcultures as functional transitional structures that assist adolescents in moving from family dependence to societal adulthood?",
+    options: ["Functionalist theory", "Marxist theory", "Interactionalist theory", "Activist theory"],
+    correctAnswer: 0, // A
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "Functionalist sociology regards youth peer groups and subcultures as serving a functional purpose: helping adolescents build autonomous identities and transition into adult social roles.",
+    source: "GES 107 First Semester CA 2022 (Page 3 Q21)"
+  },
+  {
+    id: 268,
+    question: "Distinct youth subcultures with specialized slang, dress styles, and group rituals were already in existence before the 1950s.",
+    options: ["True", "False"],
+    correctAnswer: 0, // A - True
+    topicId: "adolescence-youth",
+    topicName: "Adolescence, Youth & Life Skills",
+    explanation: "True. Sociological and historical evidence confirms that organized youth cohorts, apprentice leagues, student guilds, and street countercultures existed long before the 1950s.",
+    source: "GES 107 First Semester CA 2022 (Page 12 Q22)"
+  },
+  {
+    id: 269,
+    question: "Viruses are obligate intracellular microorganisms, which means that they:",
+    options: [
+      "Cannot replicate or reproduce their genetic material unless they are inside another living host cell",
+      "Grow and multiply freely in tap water without host cells",
+      "Are photosynthetic plants",
+      "Are large multicellular organisms"
+    ],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Viruses lack cellular machinery for protein synthesis and ATP generation; they must commandeer a host cell's biochemical apparatus to replicate.",
+    source: "GES 107 General CA 2023/2024 (Page 8)"
+  },
+  {
+    id: 270,
+    question: "The Common Cold is an acute upper respiratory viral tract infection caused primarily by:",
+    options: [
+      "Rhinoviruses (and Coronaviruses / Adenoviruses)",
+      "Entamoeba histolytica",
+      "Tapeworms",
+      "Cold atmospheric temperature without any infectious pathogen"
+    ],
+    correctAnswer: 0, // A
+    topicId: "infection-microbes",
+    topicName: "Infectious Diseases & Chain of Infection",
+    explanation: "Over 50% of common colds are caused by rhinoviruses. Cold weather alone does not cause a cold; transmission of the viral pathogen via airborne droplets or fomites is required.",
+    source: "GES 107 2nd Semester General CA (Page 1 Q2)"
+  }
+];
+
+export const TOTAL_QUESTIONS_COUNT = GES107_QUESTIONS.length;
+
+// Compute dynamic question counts per topic
+TOPICS.forEach(topic => {
+  if (topic.id === 'all') {
+    topic.questionCount = GES107_QUESTIONS.length;
+  } else {
+    topic.questionCount = GES107_QUESTIONS.filter(q => q.topicId === topic.id).length;
+  }
+});
